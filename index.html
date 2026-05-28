@@ -40,7 +40,7 @@
 
     .container{
       width:90%;
-      max-width:1200px;
+      max-width:1280px;
       margin:0 auto;
     }
 
@@ -50,8 +50,8 @@
 
       position:fixed;
 
-      width:450px;
-      height:450px;
+      width:500px;
+      height:500px;
 
       border-radius:50%;
 
@@ -83,7 +83,7 @@
       top:0;
       width:100%;
 
-      padding:22px 7%;
+      padding:24px 7%;
 
       display:flex;
       justify-content:space-between;
@@ -102,7 +102,7 @@
 
     .logo{
 
-      font-size:30px;
+      font-size:32px;
 
       font-weight:800;
 
@@ -153,7 +153,7 @@
       grid-template-columns:
         repeat(auto-fit,minmax(320px,1fr));
 
-      gap:80px;
+      gap:90px;
 
       align-items:center;
     }
@@ -179,7 +179,7 @@
 
     .hero-left h1{
 
-      font-size:72px;
+      font-size:74px;
 
       line-height:1.05;
 
@@ -257,10 +257,10 @@
     .ai-window{
 
       width:100%;
-      max-width:560px;
+      max-width:580px;
 
       background:
-        rgba(255,255,255,0.8);
+        rgba(255,255,255,0.85);
 
       border:
         1px solid rgba(255,255,255,0.5);
@@ -338,6 +338,8 @@
     .ai-card p{
 
       opacity:0.9;
+
+      font-size:15px;
     }
 
     /* SECTION */
@@ -444,7 +446,7 @@
         scale(1.05);
     }
 
-    /* PORTFOLIO */
+    /* PROJECTS */
 
     #portfolio{
 
@@ -530,6 +532,65 @@
       margin-bottom:24px;
     }
 
+    /* METRICS */
+
+    .metrics{
+
+      display:flex;
+
+      flex-direction:column;
+
+      gap:12px;
+
+      margin-bottom:22px;
+    }
+
+    .metric{
+
+      padding:12px 16px;
+
+      border-radius:14px;
+
+      background:
+        rgba(37,99,235,0.06);
+
+      color:#2563eb;
+
+      font-size:14px;
+
+      font-weight:600;
+    }
+
+    /* ARCHITECTURE */
+
+    .architecture{
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:10px;
+
+      margin-bottom:22px;
+    }
+
+    .architecture span{
+
+      padding:10px 14px;
+
+      border-radius:12px;
+
+      background:#f1f5f9;
+
+      color:#0f172a;
+
+      font-size:13px;
+
+      font-weight:600;
+    }
+
+    /* TAGS */
+
     .tags{
 
       display:flex;
@@ -543,8 +604,7 @@
 
     .tags span{
 
-      background:
-        #dbeafe;
+      background:#dbeafe;
 
       color:#2563eb;
 
@@ -578,6 +638,13 @@
       color:white;
 
       font-weight:700;
+
+      transition:0.3s;
+    }
+
+    .project-buttons a:hover{
+
+      transform:translateY(-4px);
     }
 
     /* CONTACT */
@@ -627,8 +694,7 @@
 
       border-radius:14px;
 
-      background:
-        #f8fafc;
+      background:#f8fafc;
 
       color:#0f172a;
 
@@ -694,8 +760,8 @@
       right:30px;
       bottom:30px;
 
-      width:70px;
-      height:70px;
+      width:72px;
+      height:72px;
 
       border-radius:50%;
 
@@ -952,15 +1018,36 @@
             <h3>RAG AI Assistant</h3>
 
             <p>
-              AI-поиск по базе знаний
-              с использованием RAG и semantic search.
+              AI-поиск по корпоративной базе знаний
+              с semantic search и retrieval pipelines.
             </p>
+
+            <div class="metrics">
+
+              <div class="metric">
+                ⚡ 40% faster document search
+              </div>
+
+              <div class="metric">
+                📄 10k+ indexed documents
+              </div>
+
+            </div>
+
+            <div class="architecture">
+
+              <span>LangChain</span>
+              <span>OpenAI</span>
+              <span>Vector DB</span>
+              <span>FastAPI</span>
+
+            </div>
 
             <div class="tags">
 
               <span>Python</span>
-              <span>LangChain</span>
-              <span>OpenAI</span>
+              <span>RAG</span>
+              <span>AI</span>
 
             </div>
 
@@ -1001,14 +1088,35 @@
 
             <p>
               AI-ассистент для автоматизации
-              обработки заявок и коммуникаций.
+              клиентских заявок и обработки лидов.
             </p>
+
+            <div class="metrics">
+
+              <div class="metric">
+                🚀 60% faster lead processing
+              </div>
+
+              <div class="metric">
+                🤖 AI response automation
+              </div>
+
+            </div>
+
+            <div class="architecture">
+
+              <span>Python</span>
+              <span>Automation</span>
+              <span>OpenAI</span>
+              <span>API</span>
+
+            </div>
 
             <div class="tags">
 
               <span>Automation</span>
-              <span>Python</span>
               <span>AI</span>
+              <span>CRM</span>
 
             </div>
 
@@ -1052,10 +1160,31 @@
               и FastAPI backend.
             </p>
 
-            <div class="tags">
+            <div class="metrics">
+
+              <div class="metric">
+                ⚙️ Automated workflow generation
+              </div>
+
+              <div class="metric">
+                📈 Faster business operations
+              </div>
+
+            </div>
+
+            <div class="architecture">
 
               <span>FastAPI</span>
               <span>Python</span>
+              <span>AI</span>
+              <span>REST API</span>
+
+            </div>
+
+            <div class="tags">
+
+              <span>MVP</span>
+              <span>Backend</span>
               <span>AI</span>
 
             </div>
