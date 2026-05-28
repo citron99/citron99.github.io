@@ -1,28 +1,344 @@
-<div class="section">
+<!DOCTYPE html>
+<html lang="ru">
 
-  <h2>README проекта</h2>
+<head>
 
-  <p>
-    AI assistant with Retrieval Augmented Generation (RAG)
-    for semantic search across company knowledge base.
-  </p>
+  <meta charset="UTF-8">
 
-  <h3>Основные возможности</h3>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <ul>
+  <title>RAG AI Assistant</title>
 
-    <li>Поиск информации по документам</li>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
-    <li>Semantic Search</li>
+  <style>
 
-    <li>OpenAI integration</li>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-    <li>LangChain pipelines</li>
+    body{
 
-    <li>Работа с embeddings</li>
+      font-family:'Inter',sans-serif;
 
-    <li>Vector database support</li>
+      background:
+        linear-gradient(135deg,#eef6ff,#f8fbff);
 
-  </ul>
+      color:#0f172a;
 
-</div>
+      min-height:100vh;
+    }
+
+    .container{
+
+      width:90%;
+
+      max-width:1000px;
+
+      margin:60px auto;
+    }
+
+    .back{
+
+      display:inline-block;
+
+      margin-bottom:30px;
+
+      text-decoration:none;
+
+      color:#2563eb;
+
+      font-weight:700;
+    }
+
+    .hero{
+
+      background:white;
+
+      padding:50px;
+
+      border-radius:30px;
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.08);
+
+      margin-bottom:40px;
+    }
+
+    h1{
+
+      font-size:56px;
+
+      margin-bottom:20px;
+    }
+
+    p{
+
+      line-height:1.8;
+
+      color:#475569;
+
+      font-size:18px;
+    }
+
+    .tags{
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:12px;
+
+      margin:28px 0;
+    }
+
+    .tags span{
+
+      background:#dbeafe;
+
+      color:#2563eb;
+
+      padding:10px 16px;
+
+      border-radius:999px;
+
+      font-weight:600;
+    }
+
+    .buttons{
+
+      display:flex;
+
+      gap:16px;
+
+      flex-wrap:wrap;
+    }
+
+    .btn{
+
+      display:inline-block;
+
+      padding:14px 24px;
+
+      border-radius:14px;
+
+      text-decoration:none;
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      color:white;
+
+      font-weight:700;
+
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .section{
+
+      background:white;
+
+      padding:40px;
+
+      border-radius:28px;
+
+      margin-bottom:30px;
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,0.06);
+    }
+
+    h2{
+
+      font-size:32px;
+
+      margin-bottom:24px;
+    }
+
+    h3{
+
+      margin:
+        24px 0 18px;
+    }
+
+    ul{
+
+      padding-left:24px;
+    }
+
+    li{
+
+      margin-bottom:14px;
+
+      color:#475569;
+
+      line-height:1.7;
+    }
+
+    .architecture{
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(auto-fit,minmax(200px,1fr));
+
+      gap:18px;
+
+      margin-top:30px;
+    }
+
+    .arch-card{
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      color:white;
+
+      padding:24px;
+
+      border-radius:20px;
+
+      text-align:center;
+
+      font-weight:600;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="index.html" class="back">
+      ← Назад к проектам
+    </a>
+
+    <div class="hero">
+
+      <h1>🤖 RAG AI Assistant</h1>
+
+      <p>
+
+        AI-ассистент для поиска информации
+        по базе знаний компании
+        с использованием RAG,
+        LangChain и OpenAI.
+
+      </p>
+
+      <div class="tags">
+
+        <span>Python</span>
+        <span>LangChain</span>
+        <span>OpenAI</span>
+        <span>RAG</span>
+        <span>LLM</span>
+
+      </div>
+
+      <div class="buttons">
+
+        <a
+          href="https://github.com/citron99/rag-assistant-final"
+          target="_blank"
+          class="btn"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://github.com/citron99/rag-assistant-final/blob/main/README.md"
+          target="_blank"
+          class="btn"
+        >
+          README
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Описание проекта</h2>
+
+      <p>
+
+        Проект реализует AI-систему поиска информации
+        по документам и внутренней базе знаний.
+
+        Пользователь задаёт вопрос,
+        система находит релевантные документы,
+        после чего LLM формирует итоговый ответ.
+
+      </p>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Основные возможности</h2>
+
+      <ul>
+
+        <li>Semantic Search</li>
+
+        <li>Retrieval Augmented Generation</li>
+
+        <li>OpenAI integration</li>
+
+        <li>LangChain pipelines</li>
+
+        <li>Embeddings support</li>
+
+        <li>Vector Database</li>
+
+      </ul>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Архитектура</h2>
+
+      <div class="architecture">
+
+        <div class="arch-card">
+          Documents
+        </div>
+
+        <div class="arch-card">
+          Embeddings
+        </div>
+
+        <div class="arch-card">
+          Vector DB
+        </div>
+
+        <div class="arch-card">
+          OpenAI LLM
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
