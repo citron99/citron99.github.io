@@ -57,7 +57,7 @@
 
       filter:blur(140px);
 
-      opacity:0.28;
+      opacity:0.25;
 
       z-index:-1;
     }
@@ -95,14 +95,14 @@
       backdrop-filter:blur(18px);
 
       border-bottom:
-        1px solid rgba(255,255,255,0.4);
+        1px solid rgba(255,255,255,0.3);
 
       z-index:1000;
     }
 
     .logo{
 
-      font-size:28px;
+      font-size:30px;
 
       font-weight:800;
 
@@ -113,7 +113,7 @@
 
       display:flex;
 
-      gap:32px;
+      gap:36px;
 
       list-style:none;
     }
@@ -153,7 +153,7 @@
       grid-template-columns:
         repeat(auto-fit,minmax(320px,1fr));
 
-      gap:70px;
+      gap:80px;
 
       align-items:center;
     }
@@ -179,16 +179,16 @@
 
     .hero-left h1{
 
-      font-size:64px;
+      font-size:72px;
 
-      line-height:1.1;
+      line-height:1.05;
 
       margin:28px 0;
     }
 
     .hero-left p{
 
-      font-size:22px;
+      font-size:24px;
 
       line-height:1.8;
 
@@ -210,9 +210,9 @@
 
       display:inline-block;
 
-      padding:16px 30px;
+      padding:18px 34px;
 
-      border-radius:16px;
+      border-radius:18px;
 
       text-decoration:none;
 
@@ -243,10 +243,10 @@
     }
 
     .btn:hover{
-      transform:translateY(-4px);
+      transform:translateY(-5px);
     }
 
-    /* HERO WINDOW */
+    /* AI WINDOW */
 
     .hero-right{
 
@@ -257,7 +257,7 @@
     .ai-window{
 
       width:100%;
-      max-width:520px;
+      max-width:560px;
 
       background:
         rgba(255,255,255,0.8);
@@ -267,12 +267,12 @@
 
       backdrop-filter:blur(18px);
 
-      border-radius:30px;
+      border-radius:34px;
 
-      padding:30px;
+      padding:36px;
 
       box-shadow:
-        0 25px 80px rgba(0,0,0,0.08);
+        0 30px 80px rgba(0,0,0,0.08);
     }
 
     .window-top{
@@ -303,7 +303,7 @@
       background:
         rgba(148,163,184,0.2);
 
-      margin-bottom:16px;
+      margin-bottom:18px;
     }
 
     .w90{width:90%;}
@@ -314,22 +314,30 @@
 
     .ai-card{
 
-      margin:30px 0;
+      margin:34px 0;
 
-      padding:26px;
+      padding:34px;
 
-      border-radius:22px;
+      border-radius:24px;
 
       background:
         linear-gradient(135deg,#2563eb,#7c3aed);
 
       text-align:center;
 
-      font-size:24px;
-
-      font-weight:700;
-
       color:white;
+    }
+
+    .ai-card h3{
+
+      font-size:34px;
+
+      margin-bottom:10px;
+    }
+
+    .ai-card p{
+
+      opacity:0.9;
     }
 
     /* SECTION */
@@ -342,7 +350,7 @@
 
       text-align:center;
 
-      font-size:52px;
+      font-size:56px;
 
       margin-bottom:70px;
     }
@@ -449,7 +457,7 @@
       display:grid;
 
       grid-template-columns:
-        repeat(auto-fit,minmax(340px,1fr));
+        repeat(auto-fit,minmax(360px,1fr));
 
       gap:34px;
     }
@@ -480,7 +488,7 @@
 
     .project-image{
 
-      height:220px;
+      height:240px;
 
       overflow:hidden;
     }
@@ -506,9 +514,11 @@
 
     .project-content h3{
 
-      font-size:30px;
+      font-size:32px;
 
       margin-bottom:14px;
+
+      color:#2563eb;
     }
 
     .project-content p{
@@ -558,7 +568,7 @@
 
       text-decoration:none;
 
-      padding:12px 20px;
+      padding:14px 24px;
 
       border-radius:14px;
 
@@ -675,6 +685,40 @@
       margin-bottom:24px;
     }
 
+    /* TELEGRAM */
+
+    .telegram-float{
+
+      position:fixed;
+
+      right:30px;
+      bottom:30px;
+
+      width:70px;
+      height:70px;
+
+      border-radius:50%;
+
+      display:flex;
+
+      align-items:center;
+      justify-content:center;
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      color:white;
+
+      text-decoration:none;
+
+      font-size:30px;
+
+      box-shadow:
+        0 10px 30px rgba(37,99,235,0.25);
+
+      z-index:999;
+    }
+
     /* MOBILE */
 
     @media(max-width:768px){
@@ -789,7 +833,13 @@
           <div class="code-line w90"></div>
 
           <div class="ai-card">
-            🤖 AI Workflow Active
+
+            <h3>🤖 AI Workflow Active</h3>
+
+            <p>
+              AI pipeline running successfully
+            </p>
+
           </div>
 
           <div class="code-line w70"></div>
@@ -885,7 +935,7 @@
 
       <div class="projects-grid">
 
-        <!-- PROJECT -->
+        <!-- RAG -->
 
         <div class="project-card">
 
@@ -903,7 +953,7 @@
 
             <p>
               AI-поиск по базе знаний
-              с использованием RAG.
+              с использованием RAG и semantic search.
             </p>
 
             <div class="tags">
@@ -933,6 +983,102 @@
 
         </div>
 
+        <!-- AUTODEALER -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1400&auto=format&fit=crop"
+            >
+
+          </div>
+
+          <div class="project-content">
+
+            <h3>AutoDealer AI</h3>
+
+            <p>
+              AI-ассистент для автоматизации
+              обработки заявок и коммуникаций.
+            </p>
+
+            <div class="tags">
+
+              <span>Automation</span>
+              <span>Python</span>
+              <span>AI</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+              <a
+                href="https://github.com/citron99/autodealer-ai-assistant"
+                target="_blank"
+              >
+                GitHub
+              </a>
+
+              <a href="autodealer.html">
+                Подробнее
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PARTSGEN -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop"
+            >
+
+          </div>
+
+          <div class="project-content">
+
+            <h3>PartsGen MVP</h3>
+
+            <p>
+              MVP-платформа с AI-автоматизацией
+              и FastAPI backend.
+            </p>
+
+            <div class="tags">
+
+              <span>FastAPI</span>
+              <span>Python</span>
+              <span>AI</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+              <a
+                href="https://github.com/citron99/partsgen_mvp"
+                target="_blank"
+              >
+                GitHub
+              </a>
+
+              <a href="partsgen.html">
+                Подробнее
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -950,7 +1096,8 @@
         <h2>Связаться со мной</h2>
 
         <p>
-          Обсудим AI-автоматизацию и AI-ассистентов.
+          Обсудим AI-автоматизацию,
+          AI-ассистентов и workflow automation.
         </p>
 
         <form>
@@ -992,6 +1139,16 @@
     </p>
 
   </footer>
+
+  <!-- TELEGRAM -->
+
+  <a
+    href="https://t.me/ai_prompt_dmitry"
+    target="_blank"
+    class="telegram-float"
+  >
+    ✈️
+  </a>
 
 </body>
 
