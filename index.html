@@ -10,7 +10,6 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  
   <title>Dmitry AI Portfolio</title>
 
   <link
@@ -36,6 +35,9 @@
       color:white;
 
       overflow-x:hidden;
+
+      background-image:
+      url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
     }
 
     .container{
@@ -57,7 +59,7 @@
 
       filter:blur(140px);
 
-      opacity:0.25;
+      opacity:0.22;
 
       z-index:-1;
     }
@@ -96,6 +98,9 @@
 
       border-bottom:
         1px solid rgba(255,255,255,0.08);
+
+      box-shadow:
+        0 0 40px rgba(96,165,250,0.08);
 
       z-index:1000;
     }
@@ -142,7 +147,8 @@
       display:flex;
       align-items:center;
 
-      padding-top:120px;
+      padding:
+        180px 0 120px;
     }
 
     .hero-grid{
@@ -180,9 +186,9 @@
 
     .hero-left h1{
 
-      font-size:78px;
+      font-size:64px;
 
-      line-height:1.05;
+      line-height:1.1;
 
       margin:28px 0;
     }
@@ -350,6 +356,48 @@
       100%{
         transform:translateY(0px);
       }
+    }
+
+    /* STATS */
+
+    .stats{
+
+      margin-top:50px;
+
+      display:flex;
+
+      gap:22px;
+
+      flex-wrap:wrap;
+    }
+
+    .stat-card-mini{
+
+      padding:24px;
+
+      min-width:180px;
+
+      border-radius:24px;
+
+      background:
+        rgba(255,255,255,0.06);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(12px);
+    }
+
+    .stat-card-mini h3{
+
+      font-size:42px;
+
+      margin-bottom:10px;
+    }
+
+    .stat-card-mini p{
+
+      color:#cbd5e1;
     }
 
     /* SECTION */
@@ -522,6 +570,13 @@
       height:100%;
 
       object-fit:cover;
+
+      transition:0.5s;
+    }
+
+    .project-card:hover .project-image img{
+
+      transform:scale(1.08);
     }
 
     .project-content{
@@ -594,9 +649,19 @@
       font-weight:700;
     }
 
-    /* GITHUB */
+    /* GITHUB STATS */
 
-    .github-card{
+    .github-stats{
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
+      gap:24px;
+    }
+
+    .stat-card{
 
       background:
         rgba(255,255,255,0.05);
@@ -606,16 +671,41 @@
 
       backdrop-filter:blur(14px);
 
-      border-radius:30px;
+      padding:40px;
 
-      padding:24px;
+      border-radius:28px;
+
+      text-align:center;
+
+      transition:0.3s;
     }
 
-    .github-card img{
+    .stat-card:hover{
 
-      width:100%;
+      transform:
+        translateY(-8px);
 
-      border-radius:18px;
+      box-shadow:
+        0 0 35px rgba(96,165,250,0.18);
+    }
+
+    .stat-card h3{
+
+      font-size:42px;
+
+      margin-bottom:12px;
+
+      background:
+        linear-gradient(135deg,#60a5fa,#a78bfa);
+
+      -webkit-background-clip:text;
+
+      -webkit-text-fill-color:transparent;
+    }
+
+    .stat-card p{
+
+      color:#94a3b8;
     }
 
     /* CONTACT */
@@ -802,7 +892,7 @@
       }
 
       .hero-left h1{
-        font-size:52px;
+        font-size:48px;
       }
 
       .hero-left p{
@@ -839,13 +929,13 @@
 
     <ul class="nav-links">
 
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">Обо мне</a></li>
 
       <li><a href="#stack">Stack</a></li>
 
-      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#portfolio">Проекты</a></li>
 
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Контакты</a></li>
 
     </ul>
 
@@ -866,8 +956,10 @@
         </span>
 
         <h1>
+
           Building AI Systems
           for Business Automation
+
         </h1>
 
         <p>
@@ -884,15 +976,45 @@
             href="#portfolio"
             class="btn btn-primary"
           >
-            View Projects
+            Смотреть проекты
           </a>
 
           <a
             href="#contact"
             class="btn btn-secondary"
           >
-            Contact Me
+            Связаться
           </a>
+
+        </div>
+
+        <!-- MINI STATS -->
+
+        <div class="stats">
+
+          <div class="stat-card-mini">
+
+            <h3>3+</h3>
+
+            <p>AI Projects</p>
+
+          </div>
+
+          <div class="stat-card-mini">
+
+            <h3>10+</h3>
+
+            <p>Automation Workflows</p>
+
+          </div>
+
+          <div class="stat-card-mini">
+
+            <h3>100+</h3>
+
+            <p>Hours Saved</p>
+
+          </div>
 
         </div>
 
@@ -1022,7 +1144,7 @@
 
       <div class="projects-grid">
 
-        <!-- PROJECT -->
+        <!-- RAG -->
 
         <div class="project-card">
 
@@ -1073,7 +1195,7 @@
 
         </div>
 
-        <!-- PROJECT -->
+        <!-- AUTODEALER -->
 
         <div class="project-card">
 
@@ -1124,7 +1246,7 @@
 
         </div>
 
-        <!-- PROJECT -->
+        <!-- PARTSGEN -->
 
         <div class="project-card">
 
@@ -1181,7 +1303,7 @@
 
   </section>
 
-  <!-- GITHUB -->
+  <!-- GITHUB STATS -->
 
   <section>
 
@@ -1189,11 +1311,31 @@
 
       <h2>GitHub Activity</h2>
 
-      <div class="github-card">
+      <div class="github-stats">
 
-        <img
-          src="https://github-readme-stats.vercel.app/api?username=citron99&show_icons=true&theme=tokyonight"
-        >
+        <div class="stat-card">
+
+          <h3>20+</h3>
+
+          <p>GitHub repositories</p>
+
+        </div>
+
+        <div class="stat-card">
+
+          <h3>AI</h3>
+
+          <p>Automation Projects</p>
+
+        </div>
+
+        <div class="stat-card">
+
+          <h3>Python</h3>
+
+          <p>Main Technology</p>
+
+        </div>
 
       </div>
 
@@ -1236,7 +1378,9 @@
           ></textarea>
 
           <button type="submit">
+
             Send Message
+
           </button>
 
         </form>
