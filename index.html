@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Automation & Prompt Engineering</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #cbd5e1;
+      max-width: 750px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .services,
+    .cases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 16px;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+      color: #cbd5e1;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #1e293b;
+      color: white;
+    }
+
+    textarea {
+      height: 140px;
+      resize: none;
+    }
+
+    button {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      background: #3b82f6;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div class="container">
+      <h1>AI-автоматизация и промпт-инжиниринг для бизнеса</h1>
+
+      <p>
+        Помогаю компаниям и предпринимателям экономить время
+        за счёт AI-автоматизации, умных ассистентов и
+        оптимизации рабочих процессов.
+      </p>
+
+      <a href="#contact" class="btn">Связаться</a>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="container">
+      <h2>Чем я помогаю</h2>
+
+      <div class="services">
+
+        <div class="card">
+          <h3>AI-агенты</h3>
+          <p>
+            Создание AI-помощников для обработки заявок,
+            ответов клиентам и работы с данными.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Автоматизация</h3>
+          <p>
+            Настройка процессов в n8n и интеграций между
+            сервисами без ручной рутины.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Работа с данными</h3>
+          <p>
+            Автоматическое формирование отчётов,
+            обработка таблиц и оптимизация аналитики.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section>
+    <div class="container">
+      <h2>Кейсы</h2>
+
+      <div class="cases">
+
+        <div class="card">
+          <h3>AI-ассистент для заявок</h3>
+
+          <p>
+            Автоматизирована обработка входящих заявок
+            и подготовка ответов клиентам.
+            Время обработки сократилось
+            с 20 минут до 3–5 минут.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Автоматизация отчётов</h3>
+
+          <p>
+            Настроен сбор и сравнение данных из нескольких систем.
+            Экономия до 10 часов работы в неделю.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>AI-бот для базы знаний</h3>
+
+          <p>
+            Создан внутренний AI-бот для поиска информации
+            по документации компании и обучения сотрудников.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact">
+
+      <h2>Связаться</h2>
+
+      <p>
+        Оставьте сообщение — обсудим ваш проект
+        и возможности автоматизации бизнеса.
+      </p>
+
+      <form>
+        <input type="text" placeholder="Ваше имя" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Опишите задачу"></textarea>
+
+        <button type="submit">Отправить</button>
+      </form>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 AI Automation & Prompt Engineering
+  </footer>
+
+</body>
+</html>
