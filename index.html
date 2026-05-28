@@ -10,18 +10,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Dmitry AI Automation</title>
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <title>Dmitry AI Portfolio</title>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -41,10 +30,9 @@
 
       font-family:'Inter',sans-serif;
 
-      background:
-        linear-gradient(135deg,#eef6ff,#f8fbff);
+      background:#07111f;
 
-      color:#0f172a;
+      color:white;
 
       overflow-x:hidden;
     }
@@ -55,32 +43,32 @@
       margin:0 auto;
     }
 
-    /* BACKGROUND GLOW */
+    /* BACKGROUND */
 
     .bg-blur{
 
       position:fixed;
 
-      width:400px;
-      height:400px;
+      width:450px;
+      height:450px;
 
       border-radius:50%;
 
-      filter:blur(120px);
+      filter:blur(140px);
+
+      opacity:0.25;
 
       z-index:-1;
-
-      opacity:0.35;
     }
 
     .blur1{
-      background:#60a5fa;
+      background:#2563eb;
       top:-100px;
       left:-100px;
     }
 
     .blur2{
-      background:#a855f7;
+      background:#9333ea;
       bottom:-100px;
       right:-100px;
     }
@@ -94,26 +82,26 @@
       top:0;
       width:100%;
 
-      padding:20px 7%;
+      padding:22px 7%;
 
       display:flex;
       justify-content:space-between;
       align-items:center;
 
       background:
-        rgba(255,255,255,0.12);
+        rgba(255,255,255,0.05);
 
       backdrop-filter:blur(18px);
 
       border-bottom:
-        1px solid rgba(255,255,255,0.15);
+        1px solid rgba(255,255,255,0.08);
 
       z-index:1000;
     }
 
     .logo{
 
-      font-size:26px;
+      font-size:28px;
 
       font-weight:800;
 
@@ -124,16 +112,16 @@
 
       display:flex;
 
-      gap:30px;
+      gap:32px;
 
       list-style:none;
     }
 
     .nav-links a{
 
-      text-decoration:none;
-
       color:white;
+
+      text-decoration:none;
 
       font-weight:500;
 
@@ -153,58 +141,60 @@
       display:flex;
       align-items:center;
 
+      padding-top:120px;
+    }
+
+    .hero-grid{
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+      gap:70px;
+
+      align-items:center;
+    }
+
+    .hero-badge{
+
+      display:inline-block;
+
+      padding:10px 18px;
+
+      border-radius:999px;
+
       background:
-        radial-gradient(circle at top left,#60a5fa 0%,transparent 30%),
-        radial-gradient(circle at bottom right,#a78bfa 0%,transparent 30%),
-        linear-gradient(135deg,#2563eb,#7c3aed);
+        rgba(255,255,255,0.08);
 
-      background-size:300% 300%;
+      border:
+        1px solid rgba(255,255,255,0.08);
 
-      animation:
-        gradientMove 12s ease infinite;
+      backdrop-filter:blur(12px);
 
-      color:white;
+      color:#cbd5e1;
 
-      position:relative;
+      font-weight:600;
     }
 
-    @keyframes gradientMove{
+    .hero-left h1{
 
-      0%{
-        background-position:0% 50%;
-      }
-
-      50%{
-        background-position:100% 50%;
-      }
-
-      100%{
-        background-position:0% 50%;
-      }
-    }
-
-    .hero-content{
-      max-width:760px;
-    }
-
-    .hero-content h1{
-
-      font-size:72px;
+      font-size:78px;
 
       line-height:1.05;
 
-      margin-bottom:28px;
+      margin:28px 0;
     }
 
-    .hero-content p{
+    .hero-left p{
 
       font-size:22px;
 
-      line-height:1.7;
+      line-height:1.8;
 
-      color:rgba(255,255,255,0.92);
+      color:#94a3b8;
 
-      margin-bottom:38px;
+      margin-bottom:36px;
     }
 
     .hero-buttons{
@@ -220,9 +210,9 @@
 
       display:inline-block;
 
-      padding:16px 32px;
+      padding:16px 30px;
 
-      border-radius:14px;
+      border-radius:16px;
 
       text-decoration:none;
 
@@ -233,74 +223,147 @@
 
     .btn-primary{
 
-      background:white;
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
 
-      color:#2563eb;
+      color:white;
 
       box-shadow:
-        0 12px 30px rgba(0,0,0,0.18);
+        0 10px 30px rgba(37,99,235,0.3);
     }
 
     .btn-secondary{
 
-      border:2px solid rgba(255,255,255,0.4);
+      border:
+        1px solid rgba(255,255,255,0.15);
 
       color:white;
+
+      background:
+        rgba(255,255,255,0.04);
     }
 
     .btn:hover{
       transform:translateY(-4px);
     }
 
-    /* STATS */
+    /* HERO WINDOW */
 
-    .stats{
+    .hero-right{
 
-      margin-top:60px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .ai-window{
+
+      width:100%;
+      max-width:520px;
+
+      background:
+        rgba(255,255,255,0.06);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(18px);
+
+      border-radius:30px;
+
+      padding:30px;
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.35);
+
+      animation:
+        float 5s ease-in-out infinite;
+    }
+
+    .window-top{
 
       display:flex;
 
-      gap:40px;
+      gap:10px;
 
-      flex-wrap:wrap;
+      margin-bottom:30px;
     }
 
-    .stat{
+    .window-top span{
+
+      width:14px;
+      height:14px;
+
+      border-radius:50%;
+
+      background:white;
+    }
+
+    .code-line{
+
+      height:14px;
+
+      border-radius:999px;
 
       background:
         rgba(255,255,255,0.12);
 
-      padding:20px 24px;
-
-      border-radius:20px;
-
-      backdrop-filter:blur(10px);
+      margin-bottom:16px;
     }
 
-    .stat h3{
+    .w90{width:90%;}
+    .w80{width:80%;}
+    .w70{width:70%;}
+    .w60{width:60%;}
+    .w50{width:50%;}
 
-      font-size:38px;
+    .ai-card{
 
-      margin-bottom:6px;
+      margin:30px 0;
+
+      padding:26px;
+
+      border-radius:22px;
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      text-align:center;
+
+      font-size:24px;
+
+      font-weight:700;
+
+      color:white;
     }
 
-    .stat p{
-      color:rgba(255,255,255,0.85);
+    @keyframes float{
+
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-12px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
     }
 
-    /* SECTIONS */
+    /* SECTION */
 
     section{
-      padding:110px 0;
+      padding:120px 0;
     }
 
     h2{
 
       text-align:center;
 
-      font-size:48px;
+      font-size:52px;
 
-      margin-bottom:60px;
+      margin-bottom:70px;
     }
 
     /* ABOUT */
@@ -317,14 +380,17 @@
 
     .about-card{
 
-      background:white;
+      background:
+        rgba(255,255,255,0.05);
 
-      padding:38px;
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(14px);
+
+      padding:40px;
 
       border-radius:28px;
-
-      box-shadow:
-        0 15px 40px rgba(0,0,0,0.06);
 
       transition:0.35s;
     }
@@ -335,26 +401,24 @@
         translateY(-10px);
 
       box-shadow:
-        0 25px 60px rgba(37,99,235,0.15);
+        0 0 40px rgba(96,165,250,0.2);
     }
 
     .about-card h3{
 
-      font-size:26px;
+      font-size:28px;
 
-      margin-bottom:16px;
-
-      color:#2563eb;
+      margin-bottom:18px;
     }
 
     .about-card p{
 
-      color:#475569;
+      color:#94a3b8;
 
       line-height:1.8;
     }
 
-    /* TECH STACK */
+    /* STACK */
 
     .stack-grid{
 
@@ -369,18 +433,21 @@
 
     .stack-item{
 
-      background:white;
-
       padding:16px 24px;
 
       border-radius:18px;
 
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.06);
+      background:
+        rgba(255,255,255,0.05);
 
-      font-weight:600;
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(10px);
 
       transition:0.3s;
+
+      font-weight:600;
     }
 
     .stack-item:hover{
@@ -388,30 +455,42 @@
       transform:
         translateY(-5px)
         scale(1.05);
+
+      box-shadow:
+        0 0 30px rgba(96,165,250,0.18);
     }
 
     /* PORTFOLIO */
+
+    #portfolio{
+
+      background:
+        linear-gradient(135deg,#0f172a,#111827);
+    }
 
     .projects-grid{
 
       display:grid;
 
       grid-template-columns:
-        repeat(auto-fit,minmax(330px,1fr));
+        repeat(auto-fit,minmax(340px,1fr));
 
       gap:34px;
     }
 
     .project-card{
 
-      background:white;
+      background:
+        rgba(255,255,255,0.05);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(18px);
 
       border-radius:30px;
 
       overflow:hidden;
-
-      box-shadow:
-        0 18px 45px rgba(0,0,0,0.08);
 
       transition:0.35s;
     }
@@ -420,28 +499,28 @@
 
       transform:
         translateY(-12px)
-        rotateX(4deg)
         scale(1.02);
 
+      border:
+        1px solid rgba(96,165,250,0.5);
+
       box-shadow:
-        0 25px 60px rgba(37,99,235,0.18);
+        0 0 40px rgba(96,165,250,0.2);
     }
 
     .project-image{
 
-      height:200px;
+      height:220px;
 
-      display:flex;
+      overflow:hidden;
+    }
 
-      align-items:center;
-      justify-content:center;
+    .project-image img{
 
-      font-size:76px;
+      width:100%;
+      height:100%;
 
-      background:
-        linear-gradient(135deg,#2563eb,#7c3aed);
-
-      color:white;
+      object-fit:cover;
     }
 
     .project-content{
@@ -457,11 +536,11 @@
 
     .project-content p{
 
-      color:#475569;
+      color:#94a3b8;
 
-      line-height:1.7;
+      line-height:1.8;
 
-      margin-bottom:22px;
+      margin-bottom:24px;
     }
 
     .tags{
@@ -477,9 +556,10 @@
 
     .tags span{
 
-      background:#dbeafe;
+      background:
+        rgba(37,99,235,0.18);
 
-      color:#2563eb;
+      color:#93c5fd;
 
       padding:8px 14px;
 
@@ -503,38 +583,37 @@
 
       padding:12px 20px;
 
-      border-radius:12px;
+      border-radius:14px;
 
       background:
         linear-gradient(135deg,#2563eb,#7c3aed);
 
       color:white;
 
-      font-weight:600;
-
-      transition:0.3s;
+      font-weight:700;
     }
 
-    .project-buttons a:hover{
-      opacity:0.92;
-    }
-
-    /* GITHUB STATS */
+    /* GITHUB */
 
     .github-card{
 
-      background:white;
+      background:
+        rgba(255,255,255,0.05);
 
-      padding:30px;
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(14px);
 
       border-radius:30px;
 
-      box-shadow:
-        0 15px 40px rgba(0,0,0,0.06);
+      padding:24px;
     }
 
     .github-card img{
+
       width:100%;
+
       border-radius:18px;
     }
 
@@ -543,22 +622,18 @@
     .contact-box{
 
       background:
-        linear-gradient(135deg,#2563eb,#7c3aed);
+        rgba(255,255,255,0.05);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(20px);
 
       padding:70px;
 
       border-radius:36px;
 
-      color:white;
-
       text-align:center;
-
-      box-shadow:
-        0 20px 60px rgba(37,99,235,0.2);
-    }
-
-    .contact-box h2{
-      color:white;
     }
 
     .contact-box p{
@@ -567,9 +642,9 @@
 
       margin:0 auto 36px;
 
-      font-size:18px;
+      color:#94a3b8;
 
-      color:rgba(255,255,255,0.9);
+      line-height:1.8;
     }
 
     form{
@@ -592,6 +667,11 @@
 
       border-radius:14px;
 
+      background:
+        rgba(255,255,255,0.08);
+
+      color:white;
+
       font-size:16px;
     }
 
@@ -608,35 +688,30 @@
 
       border-radius:14px;
 
-      background:white;
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
 
-      color:#2563eb;
+      color:white;
 
       font-size:17px;
 
       font-weight:700;
 
       cursor:pointer;
-
-      transition:0.3s;
-    }
-
-    button:hover{
-      transform:scale(1.03);
     }
 
     /* FOOTER */
 
     footer{
 
-      padding:60px 0;
+      padding:70px 0;
 
       text-align:center;
     }
 
     footer h3{
 
-      font-size:28px;
+      font-size:30px;
 
       margin-bottom:12px;
     }
@@ -645,7 +720,7 @@
 
       color:#64748b;
 
-      margin-bottom:22px;
+      margin-bottom:24px;
     }
 
     .footer-links{
@@ -654,26 +729,26 @@
 
       justify-content:center;
 
-      gap:20px;
+      gap:22px;
     }
 
     .footer-links a{
 
       text-decoration:none;
 
-      color:#2563eb;
+      color:#93c5fd;
 
       font-weight:600;
     }
 
-    /* TELEGRAM BUTTON */
+    /* TELEGRAM */
 
     .telegram-float{
 
       position:fixed;
 
-      right:28px;
-      bottom:28px;
+      right:30px;
+      bottom:30px;
 
       width:72px;
       height:72px;
@@ -695,7 +770,7 @@
       color:white;
 
       box-shadow:
-        0 12px 30px rgba(37,99,235,0.4);
+        0 12px 30px rgba(37,99,235,0.35);
 
       z-index:999;
 
@@ -725,24 +800,20 @@
         display:none;
       }
 
-      .hero-content h1{
-        font-size:48px;
+      .hero-left h1{
+        font-size:52px;
       }
 
-      .hero-content p{
+      .hero-left p{
         font-size:18px;
       }
 
       h2{
-        font-size:36px;
+        font-size:38px;
       }
 
       .contact-box{
         padding:40px 24px;
-      }
-
-      .stats{
-        gap:18px;
       }
     }
 
@@ -767,13 +838,13 @@
 
     <ul class="nav-links">
 
-      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#about">About</a></li>
 
       <li><a href="#stack">Stack</a></li>
 
-      <li><a href="#portfolio">Проекты</a></li>
+      <li><a href="#portfolio">Projects</a></li>
 
-      <li><a href="#contact">Контакты</a></li>
+      <li><a href="#contact">Contact</a></li>
 
     </ul>
 
@@ -783,22 +854,26 @@
 
   <header>
 
-    <div class="container">
+    <div class="container hero-grid">
 
-      <div class="hero-content">
+      <!-- LEFT -->
+
+      <div class="hero-left">
+
+        <span class="hero-badge">
+          AI Automation Engineer
+        </span>
 
         <h1>
-
-          AI Automation <br>
-          & Prompt Engineering
-
+          Building AI Systems
+          for Business Automation
         </h1>
 
         <p>
 
-          Помогаю бизнесу автоматизировать процессы,
-          внедрять AI-ассистентов
-          и сокращать десятки часов рутинной работы.
+          AI assistants, RAG systems,
+          workflow automation and integrations
+          that save businesses hours of manual work.
 
         </p>
 
@@ -808,43 +883,44 @@
             href="#portfolio"
             class="btn btn-primary"
           >
-            Смотреть проекты
+            View Projects
           </a>
 
           <a
             href="#contact"
             class="btn btn-secondary"
           >
-            Связаться
+            Contact Me
           </a>
 
         </div>
 
-        <div class="stats">
+      </div>
 
-          <div class="stat">
+      <!-- RIGHT -->
 
-            <h3>3+</h3>
+      <div class="hero-right">
 
-            <p>AI Projects</p>
+        <div class="ai-window">
 
-          </div>
+          <div class="window-top">
 
-          <div class="stat">
-
-            <h3>10+</h3>
-
-            <p>Automation Workflows</p>
+            <span></span>
+            <span></span>
+            <span></span>
 
           </div>
 
-          <div class="stat">
+          <div class="code-line w80"></div>
+          <div class="code-line w60"></div>
+          <div class="code-line w90"></div>
 
-            <h3>100+</h3>
-
-            <p>Hours Saved</p>
-
+          <div class="ai-card">
+            🤖 AI Workflow Active
           </div>
+
+          <div class="code-line w70"></div>
+          <div class="code-line w50"></div>
 
         </div>
 
@@ -860,21 +936,19 @@
 
     <div class="container">
 
-      <h2>Чем я занимаюсь</h2>
+      <h2>What I Do</h2>
 
       <div class="about-grid">
 
         <div class="about-card">
 
-          <h3>🤖 AI-ассистенты</h3>
+          <h3>🤖 AI Assistants</h3>
 
           <p>
 
-            Создание AI-ботов
-            и ассистентов
-            для обработки заявок,
-            документов
-            и коммуникаций.
+            AI systems for document processing,
+            customer requests
+            and business workflows.
 
           </p>
 
@@ -882,14 +956,12 @@
 
         <div class="about-card">
 
-          <h3>⚡ Автоматизация</h3>
+          <h3>⚡ Automation</h3>
 
           <p>
 
-            Интеграция AI-инструментов,
-            API и n8n
-            для автоматизации
-            бизнес-процессов.
+            Workflow automation with n8n,
+            APIs and AI integrations.
 
           </p>
 
@@ -897,13 +969,12 @@
 
         <div class="about-card">
 
-          <h3>📊 Работа с данными</h3>
+          <h3>📊 Data Processing</h3>
 
           <p>
 
-            Автоматическое формирование отчётов,
-            обработка данных
-            и оптимизация аналитики.
+            Automated reports,
+            analytics and data pipelines.
 
           </p>
 
@@ -930,8 +1001,8 @@
         <div class="stack-item">LangChain</div>
         <div class="stack-item">OpenAI</div>
         <div class="stack-item">n8n</div>
-        <div class="stack-item">REST API</div>
         <div class="stack-item">RAG</div>
+        <div class="stack-item">REST API</div>
         <div class="stack-item">Automation</div>
 
       </div>
@@ -946,16 +1017,20 @@
 
     <div class="container">
 
-      <h2>Мои AI-проекты</h2>
+      <h2>Featured Projects</h2>
 
       <div class="projects-grid">
 
-        <!-- RAG -->
+        <!-- PROJECT -->
 
         <div class="project-card">
 
           <div class="project-image">
-            🤖
+
+            <img
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop"
+            >
+
           </div>
 
           <div class="project-content">
@@ -964,10 +1039,9 @@
 
             <p>
 
-              AI-ассистент
-              для поиска информации
-              по базе знаний компании
-              с использованием RAG и LLM.
+              AI-powered semantic search
+              and Retrieval Augmented Generation
+              for company knowledge bases.
 
             </p>
 
@@ -998,12 +1072,16 @@
 
         </div>
 
-        <!-- AUTODEALER -->
+        <!-- PROJECT -->
 
         <div class="project-card">
 
           <div class="project-image">
-            🚗
+
+            <img
+              src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1400&auto=format&fit=crop"
+            >
+
           </div>
 
           <div class="project-content">
@@ -1012,10 +1090,9 @@
 
             <p>
 
-              AI-ассистент
-              для автоматизации
-              обработки заявок
-              и коммуникаций автодилера.
+              AI assistant for dealership automation,
+              request processing
+              and customer communication.
 
             </p>
 
@@ -1046,12 +1123,16 @@
 
         </div>
 
-        <!-- PARTSGEN -->
+        <!-- PROJECT -->
 
         <div class="project-card">
 
           <div class="project-image">
-            ⚙️
+
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop"
+            >
+
           </div>
 
           <div class="project-content">
@@ -1060,10 +1141,9 @@
 
             <p>
 
-              MVP AI-платформа
-              для генерации
-              и обработки данных
-              с использованием FastAPI и AI.
+              AI-powered MVP platform
+              built with FastAPI
+              and automation workflows.
 
             </p>
 
@@ -1128,13 +1208,13 @@
 
       <div class="contact-box">
 
-        <h2>Связаться</h2>
+        <h2>Let's Build Something Great</h2>
 
         <p>
 
-          Оставьте сообщение —
-          обсудим AI-автоматизацию,
-          интеграции и оптимизацию процессов.
+          Looking for AI automation,
+          integrations or intelligent workflows?
+          Let's discuss your project.
 
         </p>
 
@@ -1142,7 +1222,7 @@
 
           <input
             type="text"
-            placeholder="Ваше имя"
+            placeholder="Your Name"
           >
 
           <input
@@ -1151,13 +1231,11 @@
           >
 
           <textarea
-            placeholder="Опишите вашу задачу"
+            placeholder="Tell me about your project"
           ></textarea>
 
           <button type="submit">
-
-            Отправить заявку
-
+            Send Message
           </button>
 
         </form>
