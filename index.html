@@ -30,14 +30,12 @@
 
       font-family:'Inter',sans-serif;
 
-      background:#07111f;
+      background:
+        linear-gradient(135deg,#f5f7ff,#eef4ff);
 
-      color:white;
+      color:#0f172a;
 
       overflow-x:hidden;
-
-      background-image:
-      url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
     }
 
     .container{
@@ -59,19 +57,19 @@
 
       filter:blur(140px);
 
-      opacity:0.22;
+      opacity:0.28;
 
       z-index:-1;
     }
 
     .blur1{
-      background:#2563eb;
+      background:#60a5fa;
       top:-100px;
       left:-100px;
     }
 
     .blur2{
-      background:#9333ea;
+      background:#c084fc;
       bottom:-100px;
       right:-100px;
     }
@@ -92,12 +90,12 @@
       align-items:center;
 
       background:
-        rgba(255,255,255,0.05);
+        rgba(255,255,255,0.6);
 
       backdrop-filter:blur(18px);
 
       border-bottom:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(255,255,255,0.3);
 
       box-shadow:
         0 0 40px rgba(96,165,250,0.08);
@@ -111,7 +109,7 @@
 
       font-weight:800;
 
-      color:white;
+      color:#2563eb;
     }
 
     .nav-links{
@@ -125,17 +123,17 @@
 
     .nav-links a{
 
-      color:white;
+      color:#0f172a;
 
       text-decoration:none;
 
-      font-weight:500;
+      font-weight:600;
 
       transition:0.3s;
     }
 
     .nav-links a:hover{
-      opacity:0.7;
+      color:#2563eb;
     }
 
     /* HERO */
@@ -172,14 +170,12 @@
       border-radius:999px;
 
       background:
-        rgba(255,255,255,0.08);
+        rgba(37,99,235,0.08);
 
       border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(37,99,235,0.1);
 
-      backdrop-filter:blur(12px);
-
-      color:#cbd5e1;
+      color:#2563eb;
 
       font-weight:600;
     }
@@ -191,6 +187,8 @@
       line-height:1.1;
 
       margin:28px 0;
+
+      color:#0f172a;
     }
 
     .hero-left p{
@@ -199,7 +197,7 @@
 
       line-height:1.8;
 
-      color:#94a3b8;
+      color:#475569;
 
       margin-bottom:36px;
     }
@@ -236,18 +234,17 @@
       color:white;
 
       box-shadow:
-        0 10px 30px rgba(37,99,235,0.3);
+        0 10px 30px rgba(37,99,235,0.2);
     }
 
     .btn-secondary{
 
       border:
-        1px solid rgba(255,255,255,0.15);
+        1px solid rgba(37,99,235,0.15);
 
-      color:white;
+      color:#2563eb;
 
-      background:
-        rgba(255,255,255,0.04);
+      background:white;
     }
 
     .btn:hover{
@@ -268,10 +265,10 @@
       max-width:520px;
 
       background:
-        rgba(255,255,255,0.06);
+        rgba(255,255,255,0.7);
 
       border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(255,255,255,0.5);
 
       backdrop-filter:blur(18px);
 
@@ -280,7 +277,7 @@
       padding:30px;
 
       box-shadow:
-        0 25px 80px rgba(0,0,0,0.35);
+        0 25px 80px rgba(0,0,0,0.08);
 
       animation:
         float 5s ease-in-out infinite;
@@ -302,7 +299,7 @@
 
       border-radius:50%;
 
-      background:white;
+      background:#cbd5e1;
     }
 
     .code-line{
@@ -312,7 +309,7 @@
       border-radius:999px;
 
       background:
-        rgba(255,255,255,0.12);
+        rgba(148,163,184,0.2);
 
       margin-bottom:16px;
     }
@@ -379,13 +376,13 @@
 
       border-radius:24px;
 
-      background:
-        rgba(255,255,255,0.06);
+      background:white;
 
       border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(255,255,255,0.5);
 
-      backdrop-filter:blur(12px);
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.05);
     }
 
     .stat-card-mini h3{
@@ -393,11 +390,13 @@
       font-size:42px;
 
       margin-bottom:10px;
+
+      color:#2563eb;
     }
 
     .stat-card-mini p{
 
-      color:#cbd5e1;
+      color:#475569;
     }
 
     /* SECTION */
@@ -413,6 +412,8 @@
       font-size:52px;
 
       margin-bottom:70px;
+
+      color:#0f172a;
     }
 
     /* ABOUT */
@@ -429,17 +430,14 @@
 
     .about-card{
 
-      background:
-        rgba(255,255,255,0.05);
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
-      backdrop-filter:blur(14px);
+      background:white;
 
       padding:40px;
 
       border-radius:28px;
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,0.05);
 
       transition:0.35s;
     }
@@ -450,7 +448,7 @@
         translateY(-10px);
 
       box-shadow:
-        0 0 40px rgba(96,165,250,0.2);
+        0 0 40px rgba(96,165,250,0.15);
     }
 
     .about-card h3{
@@ -458,11 +456,13 @@
       font-size:28px;
 
       margin-bottom:18px;
+
+      color:#2563eb;
     }
 
     .about-card p{
 
-      color:#94a3b8;
+      color:#475569;
 
       line-height:1.8;
     }
@@ -486,17 +486,16 @@
 
       border-radius:18px;
 
-      background:
-        rgba(255,255,255,0.05);
+      background:white;
 
-      border:
-        1px solid rgba(255,255,255,0.08);
-
-      backdrop-filter:blur(10px);
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.05);
 
       transition:0.3s;
 
       font-weight:600;
+
+      color:#2563eb;
     }
 
     .stack-item:hover{
@@ -504,9 +503,6 @@
       transform:
         translateY(-5px)
         scale(1.05);
-
-      box-shadow:
-        0 0 30px rgba(96,165,250,0.18);
     }
 
     /* PORTFOLIO */
@@ -514,7 +510,7 @@
     #portfolio{
 
       background:
-        linear-gradient(135deg,#0f172a,#111827);
+        linear-gradient(135deg,#eef4ff,#f5f3ff);
     }
 
     .projects-grid{
@@ -529,17 +525,14 @@
 
     .project-card{
 
-      background:
-        rgba(255,255,255,0.05);
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
-      backdrop-filter:blur(18px);
+      background:white;
 
       border-radius:30px;
 
       overflow:hidden;
+
+      box-shadow:
+        0 18px 45px rgba(0,0,0,0.06);
 
       transition:0.35s;
     }
@@ -550,11 +543,8 @@
         translateY(-12px)
         scale(1.02);
 
-      border:
-        1px solid rgba(96,165,250,0.5);
-
       box-shadow:
-        0 0 40px rgba(96,165,250,0.2);
+        0 0 40px rgba(96,165,250,0.15);
     }
 
     .project-image{
@@ -588,11 +578,13 @@
       font-size:30px;
 
       margin-bottom:14px;
+
+      color:#0f172a;
     }
 
     .project-content p{
 
-      color:#94a3b8;
+      color:#475569;
 
       line-height:1.8;
 
@@ -613,9 +605,9 @@
     .tags span{
 
       background:
-        rgba(37,99,235,0.18);
+        #dbeafe;
 
-      color:#93c5fd;
+      color:#2563eb;
 
       padding:8px 14px;
 
@@ -663,19 +655,16 @@
 
     .stat-card{
 
-      background:
-        rgba(255,255,255,0.05);
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
-      backdrop-filter:blur(14px);
+      background:white;
 
       padding:40px;
 
       border-radius:28px;
 
       text-align:center;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.05);
 
       transition:0.3s;
     }
@@ -684,9 +673,6 @@
 
       transform:
         translateY(-8px);
-
-      box-shadow:
-        0 0 35px rgba(96,165,250,0.18);
     }
 
     .stat-card h3{
@@ -695,36 +681,28 @@
 
       margin-bottom:12px;
 
-      background:
-        linear-gradient(135deg,#60a5fa,#a78bfa);
-
-      -webkit-background-clip:text;
-
-      -webkit-text-fill-color:transparent;
+      color:#2563eb;
     }
 
     .stat-card p{
 
-      color:#94a3b8;
+      color:#475569;
     }
 
     /* CONTACT */
 
     .contact-box{
 
-      background:
-        rgba(255,255,255,0.05);
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
-      backdrop-filter:blur(20px);
+      background:white;
 
       padding:70px;
 
       border-radius:36px;
 
       text-align:center;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.05);
     }
 
     .contact-box p{
@@ -733,7 +711,7 @@
 
       margin:0 auto 36px;
 
-      color:#94a3b8;
+      color:#475569;
 
       line-height:1.8;
     }
@@ -759,9 +737,9 @@
       border-radius:14px;
 
       background:
-        rgba(255,255,255,0.08);
+        #f8fafc;
 
-      color:white;
+      color:#0f172a;
 
       font-size:16px;
     }
@@ -805,6 +783,8 @@
       font-size:30px;
 
       margin-bottom:12px;
+
+      color:#2563eb;
     }
 
     footer p{
@@ -827,7 +807,7 @@
 
       text-decoration:none;
 
-      color:#93c5fd;
+      color:#2563eb;
 
       font-weight:600;
     }
@@ -861,7 +841,7 @@
       color:white;
 
       box-shadow:
-        0 12px 30px rgba(37,99,235,0.35);
+        0 12px 30px rgba(37,99,235,0.2);
 
       z-index:999;
 
@@ -914,524 +894,8 @@
 
 <body>
 
-  <!-- BACKGROUND -->
-
   <div class="bg-blur blur1"></div>
   <div class="bg-blur blur2"></div>
-
-  <!-- NAVBAR -->
-
-  <nav class="navbar">
-
-    <div class="logo">
-      Dmitry AI
-    </div>
-
-    <ul class="nav-links">
-
-      <li><a href="#about">Обо мне</a></li>
-
-      <li><a href="#stack">Stack</a></li>
-
-      <li><a href="#portfolio">Проекты</a></li>
-
-      <li><a href="#contact">Контакты</a></li>
-
-    </ul>
-
-  </nav>
-
-  <!-- HERO -->
-
-  <header>
-
-    <div class="container hero-grid">
-
-      <!-- LEFT -->
-
-      <div class="hero-left">
-
-        <span class="hero-badge">
-          AI Automation Engineer
-        </span>
-
-        <h1>
-
-          Building AI Systems
-          for Business Automation
-
-        </h1>
-
-        <p>
-
-          AI assistants, RAG systems,
-          workflow automation and integrations
-          that save businesses hours of manual work.
-
-        </p>
-
-        <div class="hero-buttons">
-
-          <a
-            href="#portfolio"
-            class="btn btn-primary"
-          >
-            Смотреть проекты
-          </a>
-
-          <a
-            href="#contact"
-            class="btn btn-secondary"
-          >
-            Связаться
-          </a>
-
-        </div>
-
-        <!-- MINI STATS -->
-
-        <div class="stats">
-
-          <div class="stat-card-mini">
-
-            <h3>3+</h3>
-
-            <p>AI Projects</p>
-
-          </div>
-
-          <div class="stat-card-mini">
-
-            <h3>10+</h3>
-
-            <p>Automation Workflows</p>
-
-          </div>
-
-          <div class="stat-card-mini">
-
-            <h3>100+</h3>
-
-            <p>Hours Saved</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT -->
-
-      <div class="hero-right">
-
-        <div class="ai-window">
-
-          <div class="window-top">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-          </div>
-
-          <div class="code-line w80"></div>
-          <div class="code-line w60"></div>
-          <div class="code-line w90"></div>
-
-          <div class="ai-card">
-            🤖 AI Workflow Active
-          </div>
-
-          <div class="code-line w70"></div>
-          <div class="code-line w50"></div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </header>
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="container">
-
-      <h2>What I Do</h2>
-
-      <div class="about-grid">
-
-        <div class="about-card">
-
-          <h3>🤖 AI Assistants</h3>
-
-          <p>
-
-            AI systems for document processing,
-            customer requests
-            and business workflows.
-
-          </p>
-
-        </div>
-
-        <div class="about-card">
-
-          <h3>⚡ Automation</h3>
-
-          <p>
-
-            Workflow automation with n8n,
-            APIs and AI integrations.
-
-          </p>
-
-        </div>
-
-        <div class="about-card">
-
-          <h3>📊 Data Processing</h3>
-
-          <p>
-
-            Automated reports,
-            analytics and data pipelines.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- STACK -->
-
-  <section id="stack">
-
-    <div class="container">
-
-      <h2>Tech Stack</h2>
-
-      <div class="stack-grid">
-
-        <div class="stack-item">Python</div>
-        <div class="stack-item">FastAPI</div>
-        <div class="stack-item">LangChain</div>
-        <div class="stack-item">OpenAI</div>
-        <div class="stack-item">n8n</div>
-        <div class="stack-item">RAG</div>
-        <div class="stack-item">REST API</div>
-        <div class="stack-item">Automation</div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PORTFOLIO -->
-
-  <section id="portfolio">
-
-    <div class="container">
-
-      <h2>Featured Projects</h2>
-
-      <div class="projects-grid">
-
-        <!-- RAG -->
-
-        <div class="project-card">
-
-          <div class="project-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop"
-            >
-
-          </div>
-
-          <div class="project-content">
-
-            <h3>RAG AI Assistant</h3>
-
-            <p>
-
-              AI-powered semantic search
-              and Retrieval Augmented Generation
-              for company knowledge bases.
-
-            </p>
-
-            <div class="tags">
-
-              <span>Python</span>
-              <span>LangChain</span>
-              <span>OpenAI</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-              <a
-                href="https://github.com/citron99/rag-assistant-final"
-                target="_blank"
-              >
-                GitHub
-              </a>
-
-              <a href="rag-project.html">
-                Подробнее
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- AUTODEALER -->
-
-        <div class="project-card">
-
-          <div class="project-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1400&auto=format&fit=crop"
-            >
-
-          </div>
-
-          <div class="project-content">
-
-            <h3>AutoDealer AI</h3>
-
-            <p>
-
-              AI assistant for dealership automation,
-              request processing
-              and customer communication.
-
-            </p>
-
-            <div class="tags">
-
-              <span>Automation</span>
-              <span>Python</span>
-              <span>AI</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-              <a
-                href="https://github.com/citron99/autodealer-ai-assistant"
-                target="_blank"
-              >
-                GitHub
-              </a>
-
-              <a href="autodealer.html">
-                Подробнее
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- PARTSGEN -->
-
-        <div class="project-card">
-
-          <div class="project-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop"
-            >
-
-          </div>
-
-          <div class="project-content">
-
-            <h3>PartsGen MVP</h3>
-
-            <p>
-
-              AI-powered MVP platform
-              built with FastAPI
-              and automation workflows.
-
-            </p>
-
-            <div class="tags">
-
-              <span>FastAPI</span>
-              <span>AI</span>
-              <span>MVP</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-              <a
-                href="https://github.com/citron99/partsgen_mvp"
-                target="_blank"
-              >
-                GitHub
-              </a>
-
-              <a href="partsgen.html">
-                Подробнее
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- GITHUB STATS -->
-
-  <section>
-
-    <div class="container">
-
-      <h2>GitHub Activity</h2>
-
-      <div class="github-stats">
-
-        <div class="stat-card">
-
-          <h3>20+</h3>
-
-          <p>GitHub repositories</p>
-
-        </div>
-
-        <div class="stat-card">
-
-          <h3>AI</h3>
-
-          <p>Automation Projects</p>
-
-        </div>
-
-        <div class="stat-card">
-
-          <h3>Python</h3>
-
-          <p>Main Technology</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-
-    <div class="container">
-
-      <div class="contact-box">
-
-        <h2>Let's Build Something Great</h2>
-
-        <p>
-
-          Looking for AI automation,
-          integrations or intelligent workflows?
-          Let's discuss your project.
-
-        </p>
-
-        <form>
-
-          <input
-            type="text"
-            placeholder="Your Name"
-          >
-
-          <input
-            type="email"
-            placeholder="Email"
-          >
-
-          <textarea
-            placeholder="Tell me about your project"
-          ></textarea>
-
-          <button type="submit">
-
-            Send Message
-
-          </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <h3>Dmitry AI Automation</h3>
-
-    <p>
-
-      AI Automation • Prompt Engineering • RAG Systems
-
-    </p>
-
-    <div class="footer-links">
-
-      <a
-        href="https://github.com/citron99"
-        target="_blank"
-      >
-        GitHub
-      </a>
-
-      <a
-        href="https://t.me/ai_prompt_dmitry"
-        target="_blank"
-      >
-        Telegram
-      </a>
-
-    </div>
-
-  </footer>
-
-  <!-- TELEGRAM -->
-
-  <a
-    href="https://t.me/ai_prompt_dmitry"
-    target="_blank"
-    class="telegram-float"
-  >
-    ✈️
-  </a>
 
 </body>
 
