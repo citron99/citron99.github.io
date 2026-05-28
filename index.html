@@ -90,15 +90,12 @@
       align-items:center;
 
       background:
-        rgba(255,255,255,0.6);
+        rgba(255,255,255,0.7);
 
       backdrop-filter:blur(18px);
 
       border-bottom:
         1px solid rgba(255,255,255,0.3);
-
-      box-shadow:
-        0 0 40px rgba(96,165,250,0.08);
 
       z-index:1000;
     }
@@ -378,9 +375,6 @@
 
       background:white;
 
-      border:
-        1px solid rgba(255,255,255,0.5);
-
       box-shadow:
         0 10px 30px rgba(0,0,0,0.05);
     }
@@ -641,7 +635,7 @@
       font-weight:700;
     }
 
-    /* GITHUB STATS */
+    /* GITHUB */
 
     .github-stats{
 
@@ -794,24 +788,6 @@
       margin-bottom:24px;
     }
 
-    .footer-links{
-
-      display:flex;
-
-      justify-content:center;
-
-      gap:22px;
-    }
-
-    .footer-links a{
-
-      text-decoration:none;
-
-      color:#2563eb;
-
-      font-weight:600;
-    }
-
     /* TELEGRAM */
 
     .telegram-float{
@@ -840,30 +816,8 @@
 
       color:white;
 
-      box-shadow:
-        0 12px 30px rgba(37,99,235,0.2);
-
       z-index:999;
-
-      animation:pulse 2s infinite;
     }
-
-    @keyframes pulse{
-
-      0%{
-        transform:scale(1);
-      }
-
-      50%{
-        transform:scale(1.08);
-      }
-
-      100%{
-        transform:scale(1);
-      }
-    }
-
-    /* MOBILE */
 
     @media(max-width:768px){
 
@@ -882,10 +836,6 @@
       h2{
         font-size:38px;
       }
-
-      .contact-box{
-        padding:40px 24px;
-      }
     }
 
   </style>
@@ -894,8 +844,102 @@
 
 <body>
 
+  <!-- BACKGROUND -->
+
   <div class="bg-blur blur1"></div>
   <div class="bg-blur blur2"></div>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Dmitry AI
+    </div>
+
+    <ul class="nav-links">
+
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#stack">Стек</a></li>
+      <li><a href="#portfolio">Проекты</a></li>
+      <li><a href="#contact">Контакты</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <header>
+
+    <div class="container hero-grid">
+
+      <div class="hero-left">
+
+        <span class="hero-badge">
+          AI Automation Engineer
+        </span>
+
+        <h1>
+          AI-автоматизация
+          и AI-ассистенты
+          для бизнеса
+        </h1>
+
+        <p>
+          Помогаю автоматизировать процессы,
+          внедрять AI-системы и сокращать
+          десятки часов рутинной работы.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#portfolio"
+            class="btn btn-primary"
+          >
+            Смотреть проекты
+          </a>
+
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+          >
+            Связаться
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-right">
+
+        <div class="ai-window">
+
+          <div class="window-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="code-line w80"></div>
+          <div class="code-line w60"></div>
+          <div class="code-line w90"></div>
+
+          <div class="ai-card">
+            🤖 AI Workflow Active
+          </div>
+
+          <div class="code-line w70"></div>
+          <div class="code-line w50"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
 
 </body>
 
