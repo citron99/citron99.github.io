@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
 
   <title>Dmitry AI Portfolio</title>
 
@@ -44,8 +46,6 @@
       margin:0 auto;
     }
 
-    /* BACKGROUND */
-
     .bg-blur{
 
       position:fixed;
@@ -73,8 +73,6 @@
       bottom:-100px;
       right:-100px;
     }
-
-    /* NAVBAR */
 
     .navbar{
 
@@ -132,8 +130,6 @@
     .nav-links a:hover{
       color:#2563eb;
     }
-
-    /* HERO */
 
     header{
 
@@ -229,9 +225,6 @@
         linear-gradient(135deg,#2563eb,#7c3aed);
 
       color:white;
-
-      box-shadow:
-        0 10px 30px rgba(37,99,235,0.2);
     }
 
     .btn-secondary{
@@ -247,8 +240,6 @@
     .btn:hover{
       transform:translateY(-4px);
     }
-
-    /* HERO WINDOW */
 
     .hero-right{
 
@@ -275,9 +266,6 @@
 
       box-shadow:
         0 25px 80px rgba(0,0,0,0.08);
-
-      animation:
-        float 5s ease-in-out infinite;
     }
 
     .window-top{
@@ -337,64 +325,6 @@
       color:white;
     }
 
-    @keyframes float{
-
-      0%{
-        transform:translateY(0px);
-      }
-
-      50%{
-        transform:translateY(-12px);
-      }
-
-      100%{
-        transform:translateY(0px);
-      }
-    }
-
-    /* STATS */
-
-    .stats{
-
-      margin-top:50px;
-
-      display:flex;
-
-      gap:22px;
-
-      flex-wrap:wrap;
-    }
-
-    .stat-card-mini{
-
-      padding:24px;
-
-      min-width:180px;
-
-      border-radius:24px;
-
-      background:white;
-
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .stat-card-mini h3{
-
-      font-size:42px;
-
-      margin-bottom:10px;
-
-      color:#2563eb;
-    }
-
-    .stat-card-mini p{
-
-      color:#475569;
-    }
-
-    /* SECTION */
-
     section{
       padding:120px 0;
     }
@@ -410,9 +340,9 @@
       color:#0f172a;
     }
 
-    /* ABOUT */
-
-    .about-grid{
+    .about-grid,
+    .projects-grid,
+    .github-stats{
 
       display:grid;
 
@@ -422,7 +352,9 @@
       gap:30px;
     }
 
-    .about-card{
+    .about-card,
+    .project-card,
+    .stat-card{
 
       background:white;
 
@@ -436,109 +368,17 @@
       transition:0.35s;
     }
 
-    .about-card:hover{
+    .project-card{
+      overflow:hidden;
+      padding:0;
+    }
+
+    .about-card:hover,
+    .project-card:hover,
+    .stat-card:hover{
 
       transform:
         translateY(-10px);
-
-      box-shadow:
-        0 0 40px rgba(96,165,250,0.15);
-    }
-
-    .about-card h3{
-
-      font-size:28px;
-
-      margin-bottom:18px;
-
-      color:#2563eb;
-    }
-
-    .about-card p{
-
-      color:#475569;
-
-      line-height:1.8;
-    }
-
-    /* STACK */
-
-    .stack-grid{
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      justify-content:center;
-
-      gap:18px;
-    }
-
-    .stack-item{
-
-      padding:16px 24px;
-
-      border-radius:18px;
-
-      background:white;
-
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.05);
-
-      transition:0.3s;
-
-      font-weight:600;
-
-      color:#2563eb;
-    }
-
-    .stack-item:hover{
-
-      transform:
-        translateY(-5px)
-        scale(1.05);
-    }
-
-    /* PORTFOLIO */
-
-    #portfolio{
-
-      background:
-        linear-gradient(135deg,#eef4ff,#f5f3ff);
-    }
-
-    .projects-grid{
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(auto-fit,minmax(340px,1fr));
-
-      gap:34px;
-    }
-
-    .project-card{
-
-      background:white;
-
-      border-radius:30px;
-
-      overflow:hidden;
-
-      box-shadow:
-        0 18px 45px rgba(0,0,0,0.06);
-
-      transition:0.35s;
-    }
-
-    .project-card:hover{
-
-      transform:
-        translateY(-12px)
-        scale(1.02);
-
-      box-shadow:
-        0 0 40px rgba(96,165,250,0.15);
     }
 
     .project-image{
@@ -554,52 +394,41 @@
       height:100%;
 
       object-fit:cover;
-
-      transition:0.5s;
-    }
-
-    .project-card:hover .project-image img{
-
-      transform:scale(1.08);
     }
 
     .project-content{
       padding:32px;
     }
 
-    .project-content h3{
+    .project-content h3,
+    .about-card h3{
 
-      font-size:30px;
+      margin-bottom:18px;
 
-      margin-bottom:14px;
-
-      color:#0f172a;
+      color:#2563eb;
     }
 
-    .project-content p{
+    .project-content p,
+    .about-card p,
+    .stat-card p{
 
       color:#475569;
 
       line-height:1.8;
-
-      margin-bottom:24px;
     }
 
     .tags{
 
       display:flex;
-
+      gap:10px;
       flex-wrap:wrap;
 
-      gap:10px;
-
-      margin-bottom:24px;
+      margin:20px 0;
     }
 
     .tags span{
 
-      background:
-        #dbeafe;
+      background:#dbeafe;
 
       color:#2563eb;
 
@@ -635,55 +464,29 @@
       font-weight:700;
     }
 
-    /* GITHUB */
+    .stack-grid{
 
-    .github-stats{
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(auto-fit,minmax(240px,1fr));
-
-      gap:24px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:18px;
     }
 
-    .stat-card{
+    .stack-item{
+
+      padding:16px 24px;
+
+      border-radius:18px;
 
       background:white;
-
-      padding:40px;
-
-      border-radius:28px;
-
-      text-align:center;
 
       box-shadow:
         0 10px 30px rgba(0,0,0,0.05);
 
-      transition:0.3s;
-    }
-
-    .stat-card:hover{
-
-      transform:
-        translateY(-8px);
-    }
-
-    .stat-card h3{
-
-      font-size:42px;
-
-      margin-bottom:12px;
+      font-weight:600;
 
       color:#2563eb;
     }
-
-    .stat-card p{
-
-      color:#475569;
-    }
-
-    /* CONTACT */
 
     .contact-box{
 
@@ -699,22 +502,11 @@
         0 20px 60px rgba(0,0,0,0.05);
     }
 
-    .contact-box p{
-
-      max-width:700px;
-
-      margin:0 auto 36px;
-
-      color:#475569;
-
-      line-height:1.8;
-    }
-
     form{
 
       max-width:620px;
 
-      margin:0 auto;
+      margin:30px auto 0;
     }
 
     input,
@@ -730,17 +522,11 @@
 
       border-radius:14px;
 
-      background:
-        #f8fafc;
-
-      color:#0f172a;
-
-      font-size:16px;
+      background:#f8fafc;
     }
 
     textarea{
       height:160px;
-      resize:none;
     }
 
     button{
@@ -759,11 +545,7 @@
       font-size:17px;
 
       font-weight:700;
-
-      cursor:pointer;
     }
-
-    /* FOOTER */
 
     footer{
 
@@ -773,50 +555,7 @@
     }
 
     footer h3{
-
-      font-size:30px;
-
-      margin-bottom:12px;
-
       color:#2563eb;
-    }
-
-    footer p{
-
-      color:#64748b;
-
-      margin-bottom:24px;
-    }
-
-    /* TELEGRAM */
-
-    .telegram-float{
-
-      position:fixed;
-
-      right:30px;
-      bottom:30px;
-
-      width:72px;
-      height:72px;
-
-      border-radius:50%;
-
-      display:flex;
-
-      align-items:center;
-      justify-content:center;
-
-      text-decoration:none;
-
-      font-size:32px;
-
-      background:
-        linear-gradient(135deg,#2563eb,#7c3aed);
-
-      color:white;
-
-      z-index:999;
     }
 
     @media(max-width:768px){
@@ -827,10 +566,6 @@
 
       .hero-left h1{
         font-size:48px;
-      }
-
-      .hero-left p{
-        font-size:18px;
       }
 
       h2{
@@ -844,94 +579,221 @@
 
 <body>
 
-  <!-- BACKGROUND -->
-
   <div class="bg-blur blur1"></div>
   <div class="bg-blur blur2"></div>
 
-  <!-- NAVBAR -->
-
   <nav class="navbar">
 
-    <div class="logo">
-      Dmitry AI
-    </div>
+```
+<div class="logo">
+  Dmitry AI
+</div>
 
-    <ul class="nav-links">
+<ul class="nav-links">
 
-      <li><a href="#about">Обо мне</a></li>
-      <li><a href="#stack">Стек</a></li>
-      <li><a href="#portfolio">Проекты</a></li>
-      <li><a href="#contact">Контакты</a></li>
+  <li><a href="#about">Обо мне</a></li>
+  <li><a href="#stack">Стек</a></li>
+  <li><a href="#portfolio">Проекты</a></li>
+  <li><a href="#contact">Контакты</a></li>
 
-    </ul>
+</ul>
+```
 
   </nav>
 
-  <!-- HERO -->
-
   <header>
 
-    <div class="container hero-grid">
+```
+<div class="container hero-grid">
 
-      <div class="hero-left">
+  <div class="hero-left">
 
-        <span class="hero-badge">
-          AI Automation Engineer
-        </span>
+    <span class="hero-badge">
+      AI Automation Engineer
+    </span>
 
-        <h1>
-          AI-автоматизация
-          и AI-ассистенты
-          для бизнеса
-        </h1>
+    <h1>
+      AI‑автоматизация
+      и AI‑ассистенты
+      для бизнеса
+    </h1>
 
-        <p>
-          Помогаю автоматизировать процессы,
-          внедрять AI-системы и сокращать
-          десятки часов рутинной работы.
-        </p>
+    <p>
+      Помогаю автоматизировать процессы,
+      внедрять AI‑системы и сокращать
+      десятки часов рутинной работы.
+    </p>
 
-        <div class="hero-buttons">
+    <div class="hero-buttons">
 
-          <a
-            href="#portfolio"
-            class="btn btn-primary"
-          >
-            Смотреть проекты
-          </a>
+      <a
+        href="#portfolio"
+        class="btn btn-primary"
+      >
+        Смотреть проекты
+      </a>
 
-          <a
-            href="#contact"
-            class="btn btn-secondary"
-          >
-            Связаться
-          </a>
+      <a
+        href="#contact"
+        class="btn btn-secondary"
+      >
+        Связаться
+      </a>
 
-        </div>
+    </div>
+
+  </div>
+
+  <div class="hero-right">
+
+    <div class="ai-window">
+
+      <div class="window-top">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="code-line w80"></div>
+      <div class="code-line w60"></div>
+      <div class="code-line w90"></div>
+
+      <div class="ai-card">
+        🤖 AI Workflow Active
+      </div>
+
+      <div class="code-line w70"></div>
+      <div class="code-line w50"></div>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </header>
+
+  <section id="about">
+
+```
+<div class="container">
+
+  <h2>Чем я занимаюсь</h2>
+
+  <div class="about-grid">
+
+    <div class="about-card">
+
+      <h3>🤖 AI‑ассистенты</h3>
+
+      <p>
+        AI‑системы для обработки документов,
+        клиентских запросов и автоматизации процессов.
+      </p>
+
+    </div>
+
+    <div class="about-card">
+
+      <h3>⚡ Автоматизация</h3>
+
+      <p>
+        Workflow automation с помощью n8n,
+        API и AI‑интеграций.
+      </p>
+
+    </div>
+
+    <div class="about-card">
+
+      <h3>📊 Работа с данными</h3>
+
+      <p>
+        Автоматические отчёты,
+        аналитика и data pipelines.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <section id="stack">
+
+```
+<div class="container">
+
+  <h2>Технологии</h2>
+
+  <div class="stack-grid">
+
+    <div class="stack-item">Python</div>
+    <div class="stack-item">FastAPI</div>
+    <div class="stack-item">LangChain</div>
+    <div class="stack-item">OpenAI</div>
+    <div class="stack-item">n8n</div>
+    <div class="stack-item">RAG</div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <section id="portfolio">
+
+```
+<div class="container">
+
+  <h2>Мои проекты</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+
+      <div class="project-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop"
+        >
 
       </div>
 
-      <div class="hero-right">
+      <div class="project-content">
 
-        <div class="ai-window">
+        <h3>RAG AI Assistant</h3>
 
-          <div class="window-top">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <p>
+          AI‑поиск по базе знаний
+          с использованием RAG.
+        </p>
 
-          <div class="code-line w80"></div>
-          <div class="code-line w60"></div>
-          <div class="code-line w90"></div>
+        <div class="tags">
 
-          <div class="ai-card">
-            🤖 AI Workflow Active
-          </div>
+          <span>Python</span>
+          <span>LangChain</span>
+          <span>OpenAI</span>
 
-          <div class="code-line w70"></div>
-          <div class="code-line w50"></div>
+        </div>
+
+        <div class="project-buttons">
+
+          <a
+            href="https://github.com/citron99/rag-assistant-final"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+          <a href="rag-project.html">
+            Подробнее
+          </a>
 
         </div>
 
@@ -939,7 +801,66 @@
 
     </div>
 
-  </header>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <section id="contact">
+
+```
+<div class="container">
+
+  <div class="contact-box">
+
+    <h2>Связаться со мной</h2>
+
+    <p>
+      Обсудим AI‑автоматизацию и AI‑ассистентов.
+    </p>
+
+    <form>
+
+      <input
+        type="text"
+        placeholder="Ваше имя"
+      >
+
+      <input
+        type="email"
+        placeholder="Email"
+      >
+
+      <textarea
+        placeholder="Опишите ваш проект"
+      ></textarea>
+
+      <button type="submit">
+        Отправить
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <footer>
+
+```
+<h3>Dmitry AI Automation</h3>
+
+<p>
+  AI Automation • Prompt Engineering • RAG Systems
+</p>
+```
+
+  </footer>
 
 </body>
 
