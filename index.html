@@ -1,265 +1,897 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Automation & Prompt Engineering</title>
+
+  <title>Dmitry AI Automation</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
+
+      background:
+        linear-gradient(135deg,#eef6ff,#f8fbff);
+
+      color: #0f172a;
+
+      overflow-x: hidden;
     }
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
-    header {
-      padding: 100px 0;
-      text-align: center;
+    /* NAVBAR */
+
+    .navbar {
+
+      position: fixed;
+
+      top: 0;
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 20px 7%;
+
+      background:
+        rgba(255,255,255,0.15);
+
+      backdrop-filter: blur(18px);
+
+      z-index: 1000;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.2);
     }
 
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    header p {
-      font-size: 20px;
-      color: #cbd5e1;
-      max-width: 750px;
-      margin: 0 auto 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #3b82f6;
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
       color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+
+      color: white;
+
       text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
+
+      font-weight: 500;
+
       transition: 0.3s;
     }
 
-    .btn:hover {
-      background: #2563eb;
+    .nav-links a:hover {
+      opacity: 0.7;
     }
 
+    /* HERO */
+
+    header {
+
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      background:
+        radial-gradient(circle at top left,#60a5fa 0%,transparent 30%),
+        radial-gradient(circle at bottom right,#a78bfa 0%,transparent 30%),
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      color: white;
+
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero-content h1 {
+
+      font-size: 68px;
+
+      line-height: 1.1;
+
+      margin-bottom: 24px;
+    }
+
+    .hero-content p {
+
+      font-size: 22px;
+
+      line-height: 1.7;
+
+      margin-bottom: 36px;
+
+      color: rgba(255,255,255,0.92);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+
+      display: inline-block;
+
+      padding: 16px 32px;
+
+      border-radius: 14px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+
+      background: white;
+
+      color: #2563eb;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .btn-secondary {
+
+      border: 2px solid rgba(255,255,255,0.4);
+
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+    }
+
+    /* STATS */
+
+    .stats {
+
+      margin-top: 60px;
+
+      display: flex;
+
+      gap: 40px;
+
+      flex-wrap: wrap;
+    }
+
+    .stat h3 {
+      font-size: 42px;
+    }
+
+    .stat p {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* SECTION */
+
     section {
-      padding: 70px 0;
+      padding: 100px 0;
     }
 
     h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
+
       text-align: center;
+
+      font-size: 48px;
+
+      margin-bottom: 60px;
     }
 
-    .services,
-    .cases {
+    /* ABOUT */
+
+    .about-grid {
+
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+
+      grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+      gap: 28px;
     }
 
-    .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 16px;
+    .about-card {
+
+      background: white;
+
+      padding: 36px;
+
+      border-radius: 26px;
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,0.06);
+
+      transition: 0.3s;
     }
 
-    .card h3 {
-      margin-bottom: 15px;
-      font-size: 24px;
+    .about-card:hover {
+      transform: translateY(-8px);
     }
 
-    .card p {
-      color: #cbd5e1;
+    .about-card h3 {
+
+      margin-bottom: 16px;
+
+      color: #2563eb;
+
+      font-size: 26px;
     }
 
-    .contact {
+    .about-card p {
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    /* PORTFOLIO */
+
+    .projects-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit,minmax(330px,1fr));
+
+      gap: 34px;
+    }
+
+    .project-card {
+
+      background: white;
+
+      border-radius: 28px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 18px 45px rgba(0,0,0,0.08);
+
+      transition: 0.35s;
+    }
+
+    .project-card:hover {
+
+      transform:
+        translateY(-10px)
+        scale(1.02);
+    }
+
+    .project-image {
+
+      height: 200px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 74px;
+
+      color: white;
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+    }
+
+    .project-content {
+      padding: 32px;
+    }
+
+    .project-content h3 {
+
+      font-size: 30px;
+
+      margin-bottom: 14px;
+    }
+
+    .project-content p {
+
+      color: #475569;
+
+      line-height: 1.7;
+
+      margin-bottom: 22px;
+    }
+
+    .tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-bottom: 24px;
+    }
+
+    .tags span {
+
+      background: #dbeafe;
+
+      color: #2563eb;
+
+      padding: 8px 14px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+    .project-buttons {
+
+      display: flex;
+
+      gap: 14px;
+    }
+
+    .project-buttons a {
+
+      text-decoration: none;
+
+      padding: 12px 20px;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      color: white;
+
+      font-weight: 600;
+
+      transition: 0.3s;
+    }
+
+    .project-buttons a:hover {
+      opacity: 0.9;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      border-radius: 32px;
+
+      padding: 70px;
+
+      color: white;
+
       text-align: center;
     }
 
-    .contact p {
-      margin-bottom: 20px;
-      color: #cbd5e1;
+    .contact-box h2 {
+      color: white;
+    }
+
+    .contact-box p {
+
+      max-width: 700px;
+
+      margin: 0 auto 36px;
+
+      color: rgba(255,255,255,0.92);
+
+      font-size: 18px;
     }
 
     form {
-      max-width: 500px;
+
+      max-width: 620px;
+
       margin: 0 auto;
     }
 
     input,
     textarea {
+
       width: 100%;
-      padding: 15px;
-      margin-bottom: 15px;
+
+      padding: 18px;
+
+      margin-bottom: 18px;
+
       border: none;
-      border-radius: 10px;
-      background: #1e293b;
-      color: white;
+
+      border-radius: 14px;
+
+      font-size: 16px;
     }
 
     textarea {
-      height: 140px;
+      height: 160px;
       resize: none;
     }
 
     button {
-      padding: 14px 28px;
+
+      padding: 16px 36px;
+
       border: none;
-      border-radius: 10px;
-      background: #3b82f6;
-      color: white;
-      font-size: 16px;
+
+      border-radius: 14px;
+
+      background: white;
+
+      color: #2563eb;
+
+      font-size: 17px;
+
+      font-weight: 700;
+
       cursor: pointer;
+
+      transition: 0.3s;
     }
 
     button:hover {
-      background: #2563eb;
+      transform: scale(1.03);
     }
 
+    /* TELEGRAM FLOAT */
+
+    .telegram-float {
+
+      position: fixed;
+
+      right: 28px;
+      bottom: 28px;
+
+      width: 70px;
+      height: 70px;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+
+      font-size: 32px;
+
+      background:
+        linear-gradient(135deg,#2563eb,#7c3aed);
+
+      color: white;
+
+      box-shadow:
+        0 12px 30px rgba(37,99,235,0.35);
+
+      z-index: 999;
+
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* FOOTER */
+
     footer {
+
       text-align: center;
-      padding: 30px 0;
-      color: #94a3b8;
-      font-size: 14px;
+
+      padding: 40px 0;
+
+      color: #64748b;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 768px) {
+
+      .navbar {
+        padding: 18px 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-content h1 {
+        font-size: 44px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+
+      .contact-box {
+        padding: 40px 24px;
+      }
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <div class="container">
-      <h1>AI-автоматизация и промпт-инжиниринг для бизнеса</h1>
+  <!-- NAVBAR -->
 
-      <p>
-        Помогаю компаниям и предпринимателям экономить время
-        за счёт AI-автоматизации, умных ассистентов и
-        оптимизации рабочих процессов.
-      </p>
+  <nav class="navbar">
 
-      <a href="#contact" class="btn">Связаться</a>
+    <div class="logo">
+      Dmitry AI
     </div>
+
+    <ul class="nav-links">
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#portfolio">Проекты</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <header>
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <h1>
+          AI Automation <br>
+          & Prompt Engineering
+        </h1>
+
+        <p>
+          Помогаю бизнесу автоматизировать процессы,
+          внедрять AI-ассистентов и сокращать
+          десятки часов рутинной работы.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#portfolio" class="btn btn-primary">
+            Смотреть проекты
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Связаться
+          </a>
+
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <h3>3+</h3>
+            <p>AI Projects</p>
+          </div>
+
+          <div class="stat">
+            <h3>10+</h3>
+            <p>Automation Workflows</p>
+          </div>
+
+          <div class="stat">
+            <h3>100+</h3>
+            <p>Hours Saved</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </header>
 
-  <!-- SERVICES -->
-  <section>
+  <!-- ABOUT -->
+
+  <section id="about">
+
     <div class="container">
-      <h2>Чем я помогаю</h2>
 
-      <div class="services">
+      <h2>Чем я занимаюсь</h2>
 
-        <div class="card">
-          <h3>AI-агенты</h3>
+      <div class="about-grid">
+
+        <div class="about-card">
+
+          <h3>🤖 AI-ассистенты</h3>
+
           <p>
-            Создание AI-помощников для обработки заявок,
-            ответов клиентам и работы с данными.
+            Создание AI-ботов и ассистентов
+            для обработки заявок,
+            работы с документами
+            и автоматизации коммуникаций.
           </p>
+
         </div>
 
-        <div class="card">
-          <h3>Автоматизация</h3>
+        <div class="about-card">
+
+          <h3>⚡ Автоматизация</h3>
+
           <p>
-            Настройка процессов в n8n и интеграций между
-            сервисами без ручной рутины.
+            Интеграция AI-инструментов,
+            n8n и API для автоматизации
+            бизнес-процессов.
           </p>
+
         </div>
 
-        <div class="card">
-          <h3>Работа с данными</h3>
+        <div class="about-card">
+
+          <h3>📊 Работа с данными</h3>
+
           <p>
             Автоматическое формирование отчётов,
-            обработка таблиц и оптимизация аналитики.
+            обработка данных и оптимизация аналитики.
           </p>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- CASES -->
-  <section>
+  <!-- PORTFOLIO -->
+
+  <section id="portfolio">
+
     <div class="container">
-      <h2>Кейсы</h2>
 
-      <div class="cases">
+      <h2>Мои AI-проекты</h2>
 
-        <div class="card">
-          <h3>AI-ассистент для заявок</h3>
+      <div class="projects-grid">
 
-          <p>
-            Автоматизирована обработка входящих заявок
-            и подготовка ответов клиентам.
-            Время обработки сократилось
-            с 20 минут до 3–5 минут.
-          </p>
+        <!-- PROJECT -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+            🤖
+          </div>
+
+          <div class="project-content">
+
+            <h3>RAG AI Assistant</h3>
+
+            <p>
+              AI-ассистент для поиска информации
+              по базе знаний компании
+              с использованием RAG и LLM.
+            </p>
+
+            <div class="tags">
+
+              <span>Python</span>
+              <span>LangChain</span>
+              <span>OpenAI</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+              <a
+                href="https://github.com/citron99/rag-assistant-final"
+                target="_blank"
+              >
+                GitHub
+              </a>
+
+              <a href="rag-project.html">
+                Подробнее
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="card">
-          <h3>Автоматизация отчётов</h3>
+        <!-- PROJECT -->
 
-          <p>
-            Настроен сбор и сравнение данных из нескольких систем.
-            Экономия до 10 часов работы в неделю.
-          </p>
+        <div class="project-card">
+
+          <div class="project-image">
+            🚗
+          </div>
+
+          <div class="project-content">
+
+            <h3>AutoDealer AI</h3>
+
+            <p>
+              AI-ассистент для автоматизации
+              обработки заявок
+              и коммуникаций автодилера.
+            </p>
+
+            <div class="tags">
+
+              <span>Automation</span>
+              <span>Python</span>
+              <span>AI</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+              <a
+                href="https://github.com/citron99/autodealer-ai-assistant"
+                target="_blank"
+              >
+                GitHub
+              </a>
+
+              <a href="autodealer.html">
+                Подробнее
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="card">
-          <h3>AI-бот для базы знаний</h3>
+        <!-- PROJECT -->
 
-          <p>
-            Создан внутренний AI-бот для поиска информации
-            по документации компании и обучения сотрудников.
-          </p>
+        <div class="project-card">
+
+          <div class="project-image">
+            ⚙️
+          </div>
+
+          <div class="project-content">
+
+            <h3>PartsGen MVP</h3>
+
+            <p>
+              MVP AI-платформа для генерации
+              и обработки данных
+              с использованием FastAPI и AI.
+            </p>
+
+            <div class="tags">
+
+              <span>FastAPI</span>
+              <span>AI</span>
+              <span>MVP</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+              <a
+                href="https://github.com/citron99/partsgen_mvp"
+                target="_blank"
+              >
+                GitHub
+              </a>
+
+              <a href="partsgen.html">
+                Подробнее
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
   <!-- CONTACT -->
+
   <section id="contact">
-    <div class="container contact">
 
-      <h2>Связаться</h2>
+    <div class="container">
 
-      <p>
-        Оставьте сообщение — обсудим ваш проект
-        и возможности автоматизации бизнеса.
-      </p>
+      <div class="contact-box">
 
-      <form>
-        <input type="text" placeholder="Ваше имя" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Опишите задачу"></textarea>
+        <h2>Связаться</h2>
 
-        <button type="submit">Отправить</button>
-      </form>
+        <p>
+          Оставьте сообщение —
+          обсудим AI-автоматизацию,
+          интеграции и оптимизацию процессов.
+        </p>
+
+        <form>
+
+          <input
+            type="text"
+            placeholder="Ваше имя"
+          >
+
+          <input
+            type="email"
+            placeholder="Email"
+          >
+
+          <textarea
+            placeholder="Опишите вашу задачу"
+          ></textarea>
+
+          <button type="submit">
+            Отправить заявку
+          </button>
+
+        </form>
+
+      </div>
 
     </div>
+
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
-    © 2026 AI Automation & Prompt Engineering
+    © 2026 Dmitry AI Automation Portfolio
   </footer>
 
+  <!-- TELEGRAM BUTTON -->
+
+  <a
+    href="https://t.me/YOUR_USERNAME"
+    target="_blank"
+    class="telegram-float"
+  >
+    ✈️
+  </a>
+
 </body>
+
 </html>
