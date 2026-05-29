@@ -3,1248 +3,345 @@
 
 <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <title>Dmitry AI Portfolio</title>
 
-  <title>Dmitry AI Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-
-      font-family:'Inter',sans-serif;
-
-      background:
-        linear-gradient(135deg,#f5f7ff,#eef4ff);
-
-      color:#0f172a;
-
-      overflow-x:hidden;
-    }
-
-    .container{
-      width:90%;
-      max-width:1280px;
-      margin:0 auto;
-    }
-
-    /* BACKGROUND */
-
-    .bg-blur{
-
-      position:fixed;
-
-      width:500px;
-      height:500px;
-
-      border-radius:50%;
-
-      filter:blur(140px);
-
-      opacity:0.25;
-
-      z-index:-1;
-    }
-
-    .blur1{
-      background:#60a5fa;
-      top:-100px;
-      left:-100px;
-    }
-
-    .blur2{
-      background:#c084fc;
-      bottom:-100px;
-      right:-100px;
-    }
-
-    /* NAVBAR */
-
-    .navbar{
-
-      position:fixed;
-
-      top:0;
-      width:100%;
-
-      padding:24px 7%;
-
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-
-      background:
-        rgba(255,255,255,0.75);
-
-      backdrop-filter:blur(18px);
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.3);
-
-      z-index:1000;
-    }
-
-    .logo{
-
-      font-size:32px;
-
-      font-weight:800;
-
-      color:#2563eb;
-    }
-
-    .nav-links{
-
-      display:flex;
-
-      gap:36px;
-
-      list-style:none;
-    }
-
-    .nav-links a{
-
-      color:#0f172a;
-
-      text-decoration:none;
-
-      font-weight:600;
-
-      transition:0.3s;
-    }
-
-    .nav-links a:hover{
-      color:#2563eb;
-    }
-
-    /* HERO */
-
-    header{
-
-      min-height:100vh;
-
-      display:flex;
-      align-items:center;
-
-      padding:
-        180px 0 120px;
-    }
-
-   .hero-grid{
-    max-width:900px;
-    margin:0 auto;
-}
-
-    .hero-badge{
-
-      display:inline-block;
-
-      padding:10px 18px;
-
-      border-radius:999px;
-
-      background:
-        rgba(37,99,235,0.08);
-
-      border:
-        1px solid rgba(37,99,235,0.1);
-
-      color:#2563eb;
-
-      font-weight:600;
-    }
-
-    .hero-left h1{
-
-      font-size:74px;
-
-      line-height:1.05;
-
-      margin:28px 0;
-    }
-
-    .hero-left p{
-
-      font-size:24px;
-
-      line-height:1.8;
-
-      color:#475569;
-
-      margin-bottom:36px;
-    }
-
-    .hero-buttons{
-
-      display:flex;
-
-      gap:18px;
-
-      flex-wrap:wrap;
-    }
-
-    .btn{
-
-      display:inline-block;
-
-      padding:18px 34px;
-
-      border-radius:18px;
-
-      text-decoration:none;
-
-      font-weight:700;
-
-      transition:0.3s;
-    }
-
-    .btn-primary{
-
-      background:
-        linear-gradient(135deg,#2563eb,#7c3aed);
-
-      color:white;
-
-      box-shadow:
-        0 10px 30px rgba(37,99,235,0.2);
-    }
-
-    .btn-secondary{
-
-      border:
-        1px solid rgba(37,99,235,0.15);
-
-      color:#2563eb;
-
-      background:white;
-    }
-
-    .btn:hover{
-      transform:translateY(-5px);
-    }
-
-    /* AI WINDOW */
-
-    .hero-right{
-
-      display:flex;
-      justify-content:center;
-    }
-
-    .ai-window{
-
-      width:100%;
-      max-width:580px;
-
-      background:
-        rgba(255,255,255,0.85);
-
-      border:
-        1px solid rgba(255,255,255,0.5);
-
-      backdrop-filter:blur(18px);
-
-      border-radius:34px;
-
-      padding:36px;
-
-      box-shadow:
-        0 30px 80px rgba(0,0,0,0.08);
-    }
-
-    .window-top{
-
-      display:flex;
-
-      gap:10px;
-
-      margin-bottom:30px;
-    }
-
-    .window-top span{
-
-      width:14px;
-      height:14px;
-
-      border-radius:50%;
-
-      background:#cbd5e1;
-    }
-
-    .code-line{
-
-      height:14px;
-
-      border-radius:999px;
-
-      background:
-        rgba(148,163,184,0.2);
-
-      margin-bottom:18px;
-    }
-
-    .w90{width:90%;}
-    .w80{width:80%;}
-    .w70{width:70%;}
-    .w60{width:60%;}
-    .w50{width:50%;}
-
-    .ai-card h3{
-
-      font-size:34px;
-
-      margin-bottom:10px;
-    }
-
-    .ai-card p{
-
-      opacity:0.9;
-
-      font-size:15px;
-    }
-
-    /* SECTION */
-
-    section{
-      padding:120px 0;
-    }
-
-    h2{
-
-      text-align:center;
-
-      font-size:56px;
-
-      margin-bottom:70px;
-    }
-
-    /* ABOUT */
-
-    .about-grid{
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(auto-fit,minmax(280px,1fr));
-
-      gap:30px;
-    }
-
-    .about-card{
-
-      background:white;
-
-      padding:40px;
-
-      border-radius:28px;
-
-      box-shadow:
-        0 15px 40px rgba(0,0,0,0.05);
-
-      transition:0.35s;
-    }
-
-    .about-card:hover{
-
-      transform:
-        translateY(-10px);
-
-      box-shadow:
-        0 0 40px rgba(96,165,250,0.15);
-    }
-
-    .about-card h3{
-
-      font-size:28px;
-
-      margin-bottom:18px;
-
-      color:#2563eb;
-    }
-
-    .about-card p{
-
-      color:#475569;
-
-      line-height:1.8;
-    }
-
-    /* STACK */
-
-    .stack-grid{
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      justify-content:center;
-
-      gap:18px;
-    }
-
-    .stack-item{
-
-      padding:16px 24px;
-
-      border-radius:18px;
-
-      background:white;
-
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.05);
-
-      transition:0.3s;
-
-      font-weight:600;
-
-      color:#2563eb;
-    }
-
-    .stack-item:hover{
-
-      transform:
-        translateY(-5px)
-        scale(1.05);
-    }
-
-    /* PROJECTS */
-
-    #portfolio{
-
-      background:
-        linear-gradient(135deg,#eef4ff,#f5f3ff);
-    }
-
-    .projects-grid{
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(auto-fit,minmax(360px,1fr));
-
-      gap:34px;
-    }
-
-    .project-card{
-
-      background:white;
-
-      border-radius:30px;
-
-      overflow:hidden;
-
-      box-shadow:
-        0 18px 45px rgba(0,0,0,0.06);
-
-      transition:0.35s;
-    }
-
-    .project-card:hover{
-
-      transform:
-        translateY(-12px)
-        scale(1.02);
-
-      box-shadow:
-        0 0 40px rgba(96,165,250,0.15);
-    }
-
-    .project-image{
-
-      height:240px;
-
-      overflow:hidden;
-    }
-
-    .project-image img{
-
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-
-      transition:0.5s;
-    }
-
-    .project-card:hover .project-image img{
-
-      transform:scale(1.08);
-    }
-
-    .project-content{
-      padding:32px;
-    }
-
-    .project-content h3{
-
-      font-size:32px;
-
-      margin-bottom:14px;
-
-      color:#2563eb;
-    }
-
-    .project-content p{
-
-      color:#475569;
-
-      line-height:1.8;
-
-      margin-bottom:24px;
-    }
-
-    /* METRICS */
-
-    .metrics{
-
-      display:flex;
-
-      flex-direction:column;
-
-      gap:12px;
-
-      margin-bottom:22px;
-    }
-
-    .metric{
-
-      padding:12px 16px;
-
-      border-radius:14px;
-
-      background:
-        rgba(37,99,235,0.06);
-
-      color:#2563eb;
-
-      font-size:14px;
-
-      font-weight:600;
-    }
-
-    /* ARCHITECTURE */
-
-    .architecture{
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:10px;
-
-      margin-bottom:22px;
-    }
-
-    .architecture span{
-
-      padding:10px 14px;
-
-      border-radius:12px;
-
-      background:#f1f5f9;
-
-      color:#0f172a;
-
-      font-size:13px;
-
-      font-weight:600;
-    }
-
-    /* TAGS */
-
-    .tags{
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:10px;
-
-      margin-bottom:24px;
-    }
-
-    .tags span{
-
-      background:#dbeafe;
-
-      color:#2563eb;
-
-      padding:8px 14px;
-
-      border-radius:999px;
-
-      font-size:14px;
-
-      font-weight:600;
-    }
-
-    .project-buttons{
-
-      display:flex;
-
-      gap:14px;
-    }
-
-    .project-buttons a{
-
-      text-decoration:none;
-
-      padding:14px 24px;
-
-      border-radius:14px;
-
-      background:
-        linear-gradient(135deg,#2563eb,#7c3aed);
-
-      color:white;
-
-      font-weight:700;
-
-      transition:0.3s;
-    }
-
-    .project-buttons a:hover{
-
-      transform:translateY(-4px);
-    }
-
-    /* CONTACT */
-
-    .contact-box{
-
-      background:white;
-
-      padding:70px;
-
-      border-radius:36px;
-
-      text-align:center;
-
-      box-shadow:
-        0 20px 60px rgba(0,0,0,0.05);
-    }
-
-    .contact-box p{
-
-      max-width:700px;
-
-      margin:0 auto 36px;
-
-      color:#475569;
-
-      line-height:1.8;
-    }
-
-    form{
-
-      max-width:620px;
-
-      margin:0 auto;
-    }
-
-    input,
-    textarea{
-
-      width:100%;
-
-      padding:18px;
-
-      margin-bottom:18px;
-
-      border:none;
-
-      border-radius:14px;
-
-      background:#f8fafc;
-
-      color:#0f172a;
-
-      font-size:16px;
-    }
-
-    textarea{
-      height:160px;
-      resize:none;
-    }
-
-    button{
-
-      padding:16px 36px;
-
-      border:none;
-
-      border-radius:14px;
-
-      background:
-        linear-gradient(135deg,#2563eb,#7c3aed);
-
-      color:white;
-
-      font-size:17px;
-
-      font-weight:700;
-
-      cursor:pointer;
-    }
-
-    /* FOOTER */
-
-    footer{
-
-      padding:70px 0;
-
-      text-align:center;
-    }
-
-    footer h3{
-
-      font-size:30px;
-
-      margin-bottom:12px;
-
-      color:#2563eb;
-    }
-
-    footer p{
-
-      color:#64748b;
-
-      margin-bottom:24px;
-    }
-
-    /* TELEGRAM */
-
-    .telegram-float{
-
-      position:fixed;
-
-      right:30px;
-      bottom:30px;
-
-      width:72px;
-      height:72px;
-
-      border-radius:50%;
-
-      display:flex;
-
-      align-items:center;
-      justify-content:center;
-
-      background:
-        linear-gradient(135deg,#2563eb,#7c3aed);
-
-      color:white;
-
-      text-decoration:none;
-
-      font-size:30px;
-
-      box-shadow:
-        0 10px 30px rgba(37,99,235,0.25);
-
-      z-index:999;
-    }
-
-    /* MOBILE */
-
-    @media(max-width:768px){
-
-      .nav-links{
-        display:none;
-      }
-
-      .hero-left h1{
-        font-size:48px;
-      }
-
-      .hero-left p{
-        font-size:18px;
-      }
-
-      h2{
-        font-size:38px;
-      }
-
-      .contact-box{
-        padding:40px 24px;
-      }
-    }
-
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- BACKGROUND -->
+    <div class="bg-blur blur1"></div>
+    <div class="bg-blur blur2"></div>
 
-  <div class="bg-blur blur1"></div>
-  <div class="bg-blur blur2"></div>
+    <!-- NAVBAR -->
 
-  <!-- NAVBAR -->
+    <nav class="navbar">
 
-  <nav class="navbar">
-
-    <div class="logo">
-      Dmitry AI
-    </div>
-
-    <ul class="nav-links">
-
-      <li><a href="#about">Обо мне</a></li>
-      <li><a href="#stack">Стек</a></li>
-      <li><a href="#portfolio">Проекты</a></li>
-      <li><a href="#contact">Контакты</a></li>
-
-    </ul>
-
-  </nav>
-
-  <!-- HERO -->
-
-  <header>
-
-    <div class="container hero-grid">
-
-      <div class="hero-left">
-
-        <span class="hero-badge">
-          AI Automation Engineer
-        </span>
-
-        <h1>
-          Разрабатываю AI-ассистентов
-          и автоматизирую
-          бизнес-процессы
-        </h1>
-
-        <p>
-          Помогаю компаниям сокращать рутину,
-          ускорять обработку данных и внедрять
-          AI-решения, которые экономят время сотрудников.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a
-            href="#portfolio"
-            class="btn btn-primary"
-          >
-            Смотреть проекты
-          </a>
-
-          <a
-            href="#contact"
-            class="btn btn-secondary"
-          >
-            Связаться
-          </a>
-
+        <div class="logo">
+            Dmitry AI
         </div>
-        <div class="hero-stats">
 
-  <div class="hero-stat">
-    <h3>3+</h3>
-    <p>AI проектов</p>
-  </div>
+        <ul class="nav-links">
 
-  <div class="hero-stat">
-    <h3>10+</h3>
-    <p>Автоматизаций</p>
-  </div>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#projects">Кейсы</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#contact">Контакты</a></li>
 
-  <div class="hero-stat">
-    <h3>100+</h3>
-    <p>Часов экономии</p>
-  </div>
+        </ul>
 
-</div>
+        <button id="themeToggle">
+            🌙
+        </button>
 
-      </div>
+    </nav>
 
+    <!-- HERO -->
 
-      </div>
+    <header class="hero">
 
-    </div>
+        <div class="container">
 
-  </header>
+            <div class="hero-content">
 
-  <!-- ABOUT -->
+                <span class="hero-badge">
+                    🤖 AI Automation & Prompt Engineering
+                </span>
 
-  <section id="about">
+                <h1>
 
-    <div class="container">
+                    Разрабатываю AI-ассистентов
+                    и автоматизирую
+                    бизнес-процессы
 
-      <h2>Чем я занимаюсь</h2>
+                </h1>
 
-      <div class="about-grid">
+                <p>
 
-        <div class="about-card">
+                    Помогаю компаниям сокращать рутину,
+                    ускорять обработку данных и внедрять
+                    AI-решения, которые экономят время сотрудников.
 
-          <h3>🤖 AI-ассистенты</h3>
+                </p>
 
-          <p>
-            AI-системы для обработки документов,
-            клиентских запросов и автоматизации процессов.
-          </p>
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        Смотреть кейсы
+                    </a>
+
+                    <a href="https://t.me/ai_prompt_dmitry"
+                       target="_blank"
+                       class="btn btn-secondary">
+                        Telegram
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div class="stat-card">
+                        <h3>3+</h3>
+                        <p>AI проектов</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>10+</h3>
+                        <p>Автоматизаций</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>100+</h3>
+                        <p>Часов экономии</p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="about-card">
+    </header>
 
-          <h3>⚡ Автоматизация</h3>
+    <!-- ABOUT -->
 
-          <p>
-            Workflow automation с помощью n8n,
-            API и AI-интеграций.
-          </p>
+    <section id="about">
+
+        <div class="container">
+
+            <h2>Обо мне</h2>
+
+            <div class="about-box">
+
+                <div>
+
+                    <h3>AI Automation Engineer</h3>
+
+                    <p>
+
+                        Разрабатываю AI-ассистентов,
+                        RAG-системы и автоматизации
+                        на Python, FastAPI, LangChain и n8n.
+
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="about-card">
+    </section>
 
-          <h3>📊 Работа с данными</h3>
+    <!-- PROJECTS -->
 
-          <p>
-            Автоматические отчёты,
-            аналитика и data pipelines.
-          </p>
+    <section id="projects">
+
+        <div class="container">
+
+            <h2>Кейсы</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+
+                    <img src="assets/rag.jpg">
+
+                    <div class="project-content">
+
+                        <h3>RAG Assistant</h3>
+
+                        <p>
+                            AI-поиск по базе знаний.
+                        </p>
+
+                        <div class="metric">
+                            ⚡ 40% faster document search
+                        </div>
+
+                        <div class="architecture">
+
+                            <span>LangChain</span>
+                            <span>OpenAI</span>
+                            <span>Vector DB</span>
+                            <span>FastAPI</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a href="rag-project.html">
+                                Подробнее
+                            </a>
+
+                            <a href="https://github.com/citron99/rag-assistant-final"
+                               target="_blank">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+
+                    <img src="assets/autodealer.jpg">
+
+                    <div class="project-content">
+
+                        <h3>AutoDealer AI</h3>
+
+                        <p>
+                            AI-ассистент для обработки заявок.
+                        </p>
+
+                        <div class="metric">
+                            🚗 60% faster lead processing
+                        </div>
+
+                        <div class="architecture">
+
+                            <span>Python</span>
+                            <span>OpenAI</span>
+                            <span>Automation</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a href="autodealer.html">
+                                Подробнее
+                            </a>
+
+                            <a href="https://github.com/citron99/autodealer-ai-assistant"
+                               target="_blank">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+
+                    <img src="assets/partsgen.jpg">
+
+                    <div class="project-content">
+
+                        <h3>PartsGen MVP</h3>
+
+                        <p>
+                            MVP платформа с FastAPI.
+                        </p>
+
+                        <div class="metric">
+                            ⚙️ Automated workflow generation
+                        </div>
+
+                        <div class="architecture">
+
+                            <span>FastAPI</span>
+                            <span>Python</span>
+                            <span>REST API</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a href="partsgen.html">
+                                Подробнее
+                            </a>
+
+                            <a href="https://github.com/citron99/partsgen_mvp"
+                               target="_blank">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-      </div>
+    </section>
 
-    </div>
+    <!-- SERVICES -->
 
-  </section>
+    <section id="services">
 
-  <!-- STACK -->
+        <div class="container">
 
-  <section id="stack">
+            <h2>Услуги</h2>
 
-    <div class="container">
+            <div class="services-grid">
 
-      <h2>Технологии</h2>
+                <div class="service-card">
+                    AI-ассистенты
+                </div>
 
-      <div class="stack-grid">
+                <div class="service-card">
+                    RAG системы
+                </div>
 
-        <div class="stack-item">Python</div>
-        <div class="stack-item">FastAPI</div>
-        <div class="stack-item">LangChain</div>
-        <div class="stack-item">OpenAI</div>
-        <div class="stack-item">n8n</div>
-        <div class="stack-item">RAG</div>
+                <div class="service-card">
+                    Prompt Engineering
+                </div>
 
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-
-  <section id="portfolio">
-
-    <div class="container">
-
-      <h2>Мои проекты</h2>
-
-      <div class="projects-grid">
-
-        <!-- RAG -->
-
-        <div class="project-card">
-
-          <div class="project-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop"
-            >
-
-          </div>
-
-          <div class="project-content">
-
-            <h3>RAG AI Assistant</h3>
-
-            <p>
-              AI-поиск по корпоративной базе знаний
-              с semantic search и retrieval pipelines.
-            </p>
-
-            <div class="metrics">
-
-              <div class="metric">
-                ⚡ 40% faster document search
-              </div>
-
-              <div class="metric">
-                📄 10k+ indexed documents
-              </div>
+                <div class="service-card">
+                    Автоматизация бизнес-процессов
+                </div>
 
             </div>
-
-            <div class="architecture">
-
-              <span>LangChain</span>
-              <span>OpenAI</span>
-              <span>Vector DB</span>
-              <span>FastAPI</span>
-
-            </div>
-
-            <div class="tags">
-
-              <span>Python</span>
-              <span>RAG</span>
-              <span>AI</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-              <a
-                href="https://github.com/citron99/rag-assistant-final"
-                target="_blank"
-              >
-                GitHub
-              </a>
-
-              <a href="rag-project.html">
-                Подробнее
-              </a>
-
-            </div>
-
-          </div>
 
         </div>
 
-        <!-- AUTODEALER -->
+    </section>
 
-        <div class="project-card">
+    <!-- CONTACT -->
 
-          <div class="project-image">
+    <section id="contact">
 
-            <img
-              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400&auto=format&fit=crop"
-            >
+        <div class="container">
 
-          </div>
+            <h2>Контакты</h2>
 
-          <div class="project-content">
+            <div class="contact-box">
 
-            <h3>AutoDealer AI</h3>
+                <a href="https://t.me/ai_prompt_dmitry">
+                    Telegram
+                </a>
 
-            <p>
-              AI-ассистент для автоматизации
-              клиентских заявок и обработки лидов.
-            </p>
-
-            <div class="metrics">
-
-              <div class="metric">
-                🚀 60% faster lead processing
-              </div>
-
-              <div class="metric">
-                🤖 AI response automation
-              </div>
+                <a href="https://github.com/citron99">
+                    GitHub
+                </a>
 
             </div>
-
-            <div class="architecture">
-
-              <span>Python</span>
-              <span>Automation</span>
-              <span>OpenAI</span>
-              <span>API</span>
-
-            </div>
-
-            <div class="tags">
-
-              <span>Automation</span>
-              <span>AI</span>
-              <span>CRM</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-              <a
-                href="https://github.com/citron99/autodealer-ai-assistant"
-                target="_blank"
-              >
-                GitHub
-              </a>
-
-              <a href="autodealer.html">
-                Подробнее
-              </a>
-
-            </div>
-
-          </div>
 
         </div>
 
-        <!-- PARTSGEN -->
+    </section>
 
-        <div class="project-card">
+    <a href="https://t.me/ai_prompt_dmitry"
+       class="telegram-float"
+       target="_blank">
+       ✈
+    </a>
 
-          <div class="project-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop"
-            >
-
-          </div>
-
-          <div class="project-content">
-
-            <h3>PartsGen MVP</h3>
-
-            <p>
-              MVP-платформа с AI-автоматизацией
-              и FastAPI backend.
-            </p>
-
-            <div class="metrics">
-
-              <div class="metric">
-                ⚙️ Automated workflow generation
-              </div>
-
-              <div class="metric">
-                📈 Faster business operations
-              </div>
-
-            </div>
-
-            <div class="architecture">
-
-              <span>FastAPI</span>
-              <span>Python</span>
-              <span>AI</span>
-              <span>REST API</span>
-
-            </div>
-
-            <div class="tags">
-
-              <span>MVP</span>
-              <span>Backend</span>
-              <span>AI</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-              <a
-                href="https://github.com/citron99/partsgen_mvp"
-                target="_blank"
-              >
-                GitHub
-              </a>
-
-              <a href="partsgen.html">
-                Подробнее
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-
-    <div class="container">
-
-      <div class="contact-box">
-
-        <h2>Связаться со мной</h2>
-
-        <p>
-          Обсудим AI-автоматизацию,
-          AI-ассистентов и workflow automation.
-        </p>
-
-        <form>
-
-          <input
-            type="text"
-            placeholder="Ваше имя"
-          >
-
-          <input
-            type="email"
-            placeholder="Email"
-          >
-
-          <textarea
-            placeholder="Опишите ваш проект"
-          ></textarea>
-
-          <button type="submit">
-            Отправить
-          </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <h3>Dmitry AI Automation</h3>
-
-    <p>
-      AI Automation • Prompt Engineering • RAG Systems
-    </p>
-
-  </footer>
-
-  <!-- TELEGRAM -->
-
-  <a
-    href="https://t.me/ai_prompt_dmitry"
-    target="_blank"
-    class="telegram-float"
-  >
-    ✈️
-  </a>
+    <script src="script.js"></script>
 
 </body>
 
