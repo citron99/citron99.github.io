@@ -4,130 +4,102 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PartsGen MVP</title>
 
-<style>
-
-body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#eef6ff,#f8fbff);
-  color:#0f172a;
-}
-
-.container{
-  width:90%;
-  max-width:1100px;
-  margin:60px auto;
-}
-
-.hero,.section{
-  background:white;
-  padding:45px;
-  border-radius:28px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
-  margin-top:30px;
-}
-
-.tags{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin:20px 0;
-}
-
-.tags span{
-  background:#dbeafe;
-  color:#2563eb;
-  padding:8px 14px;
-  border-radius:999px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 24px;
-  border-radius:12px;
-  text-decoration:none;
-  color:white;
-  font-weight:700;
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<nav class="navbar">
 
-<a href="index.html">← Назад</a>
+    <div class="logo">
+        Dmitry AI
+    </div>
 
-<div class="hero">
+    <a href="index.html" class="btn btn-secondary">
+        ← На главную
+    </a>
 
-<h1>PartsGen MVP</h1>
+</nav>
 
-<p>
-MVP AI-платформа
-для генерации и обработки данных
-с использованием FastAPI и AI.
-</p>
+<section style="padding-top:180px;">
 
-<div class="tags">
+    <div class="container">
 
-<span>FastAPI</span>
-<span>AI</span>
-<span>MVP</span>
+        <h1>PartsGen MVP</h1>
 
-</div>
+        <img
+            src="assets/partsgen.jpg"
+            style="
+                width:100%;
+                border-radius:24px;
+                margin:40px 0;
+            "
+        >
 
-<a
-  href="https://github.com/citron99/partsgen_mvp"
-  target="_blank"
-  class="btn"
->
-GitHub
-</a>
+        <h2>Описание проекта</h2>
 
-</div>
+        <p>
 
-<div class="section">
+            MVP-платформа для автоматизации
+            бизнес-процессов.
 
-<h2>Описание проекта</h2>
+            Backend реализован на FastAPI,
+            предусмотрена интеграция с AI-сервисами
+            и внешними API.
 
-<p>
-Проект представляет MVP-платформу
-для генерации,
-обработки и автоматизации работы с данными.
-</p>
+        </p>
 
-</div>
+        <h2>Результат</h2>
 
-<div class="section">
+        <div class="hero-stats">
 
-<h2>Технологии</h2>
+            <div class="stat-card">
 
-<ul>
+                <h3>MVP</h3>
 
-<li>FastAPI backend</li>
+                <p>Быстрый запуск продукта</p>
 
-<li>AI integration</li>
+            </div>
 
-<li>REST API</li>
+            <div class="stat-card">
 
-<li>MVP architecture</li>
+                <h3>API</h3>
 
-</ul>
+                <p>Готовая интеграционная архитектура</p>
 
-</div>
+            </div>
 
-</div>
+        </div>
+
+        <h2>Архитектура</h2>
+
+        <div class="architecture">
+
+            <span>FastAPI</span>
+            <span>Python</span>
+            <span>REST API</span>
+            <span>AI Integration</span>
+
+        </div>
+
+        <br>
+
+        <a
+            href="https://github.com/citron99/partsgen_mvp"
+            target="_blank"
+            class="btn btn-primary"
+        >
+            GitHub проекта
+        </a>
+
+    </div>
+
+</section>
 
 </body>
 
