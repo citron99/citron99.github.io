@@ -4,131 +4,102 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<title>AutoDealer AI</title>
 
-<title>AutoDealer AI Assistant</title>
-
-<style>
-
-body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#eef6ff,#f8fbff);
-  color:#0f172a;
-}
-
-.container{
-  width:90%;
-  max-width:1100px;
-  margin:60px auto;
-}
-
-.hero,.section{
-  background:white;
-  padding:45px;
-  border-radius:28px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
-  margin-top:30px;
-}
-
-.tags{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin:20px 0;
-}
-
-.tags span{
-  background:#dbeafe;
-  color:#2563eb;
-  padding:8px 14px;
-  border-radius:999px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 24px;
-  border-radius:12px;
-  text-decoration:none;
-  color:white;
-  font-weight:700;
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<nav class="navbar">
 
-<a href="index.html">← Назад</a>
+    <div class="logo">
+        Dmitry AI
+    </div>
 
-<div class="hero">
+    <a href="index.html" class="btn btn-secondary">
+        ← На главную
+    </a>
 
-<h1>AutoDealer AI Assistant</h1>
+</nav>
 
-<p>
-AI-ассистент для автоматизации
-обработки заявок автодилера
-и коммуникаций с клиентами.
-</p>
+<section style="padding-top:180px;">
 
-<div class="tags">
+    <div class="container">
 
-<span>Automation</span>
-<span>Python</span>
-<span>AI</span>
+        <h1>AutoDealer AI</h1>
 
-</div>
+        <img
+            src="assets/autodealer.jpg"
+            style="
+                width:100%;
+                border-radius:24px;
+                margin:40px 0;
+            "
+        >
 
-<a
-  href="https://github.com/citron99/autodealer-ai-assistant"
-  target="_blank"
-  class="btn"
->
-GitHub
-</a>
+        <h2>Описание проекта</h2>
 
-</div>
+        <p>
 
-<div class="section">
+            AI-ассистент для автоматизации
+            обработки клиентских заявок
+            в автомобильном бизнесе.
 
-<h2>Описание проекта</h2>
+            Система помогает быстро отвечать
+            клиентам и классифицировать лиды.
 
-<p>
-Система помогает автоматизировать
-обработку заявок,
-классификацию запросов
-и подготовку ответов клиентам.
-</p>
+        </p>
 
-</div>
+        <h2>Результат</h2>
 
-<div class="section">
+        <div class="hero-stats">
 
-<h2>Функциональность</h2>
+            <div class="stat-card">
 
-<ul>
+                <h3>60%</h3>
 
-<li>AI-обработка заявок</li>
+                <p>Быстрее обработка лидов</p>
 
-<li>Автоматические ответы</li>
+            </div>
 
-<li>Интеграция с AI API</li>
+            <div class="stat-card">
 
-<li>Снижение ручной работы</li>
+                <h3>24/7</h3>
 
-</ul>
+                <p>Автоматическая обработка заявок</p>
 
-</div>
+            </div>
 
-</div>
+        </div>
+
+        <h2>Архитектура</h2>
+
+        <div class="architecture">
+
+            <span>Python</span>
+            <span>OpenAI</span>
+            <span>Automation</span>
+            <span>API</span>
+
+        </div>
+
+        <br>
+
+        <a
+            href="https://github.com/citron99/autodealer-ai-assistant"
+            target="_blank"
+            class="btn btn-primary"
+        >
+            GitHub проекта
+        </a>
+
+    </div>
+
+</section>
 
 </body>
 
