@@ -1,4 +1,4 @@
-# 👋 Dmitry — AI Automation Engineer & Prompt Engineer
+#  Dmitry — AI Automation Engineer & Prompt Engineer
 
 [English](#english) · [Русский](#русский) · [Portfolio](https://citron99.github.io/)
 
