@@ -1,348 +1,304 @@
-<!DOCTYPE html>
-<html lang="ru">
-
+<!doctype html>
+<html lang="ru" data-theme="dark">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Портфолио Дмитрия: AI-ассистенты, RAG-системы и автоматизация бизнес-процессов.">
+  <meta name="theme-color" content="#0c081a">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Дмитрий — AI systems & automation">
+  <meta property="og:description" content="AI-ассистенты, RAG-системы и автоматизация бизнес-процессов. От прототипа до продакшна.">
+  <meta property="og:image" content="https://citron99.github.io/assets/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://citron99.github.io/">
+  <meta property="og:site_name" content="Dmitry AI Portfolio">
 
-    <title>Dmitry AI Portfolio</title>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Дмитрий — AI systems & automation">
+  <meta name="twitter:description" content="AI-ассистенты, RAG-системы и автоматизация бизнес-процессов.">
+  <meta name="twitter:image" content="https://citron99.github.io/assets/og-preview.png">
 
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <title>Дмитрий — AI systems & automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c081a'/%3E%3Cpath d='M16 17h16c11 0 18 6 18 15S43 47 32 47H16V17Zm10 8v14h6c5 0 8-2 8-7s-3-7-8-7h-6Z' fill='%237c3aed'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
-
 <body>
-
-    <div class="bg-blur blur1"></div>
-    <div class="bg-blur blur2"></div>
-
-    <!-- NAVBAR -->
-
-    <nav class="navbar">
-
-        <div class="logo">
-            Dmitry AI
-        </div>
-
-        <ul class="nav-links">
-
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#projects">Кейсы</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#contact">Контакты</a></li>
-
-        </ul>
-
-        <button id="themeToggle">
-            🌙
-        </button>
-
-    </nav>
-
-    <!-- HERO -->
-
-    <header class="hero">
-
-        <div class="container">
-
-            <div class="hero-content">
-
-                <span class="hero-badge">
-                    🤖 AI Automation & Prompt Engineering
-                </span>
-
-                <h1>
-
-                    Разрабатываю AI-ассистентов
-                    и автоматизирую
-                    бизнес-процессы
-
-                </h1>
-
-                <p>
-
-                    Помогаю компаниям сокращать рутину,
-                    ускорять обработку данных и внедрять
-                    AI-решения, которые экономят время сотрудников.
-
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#projects" class="btn btn-primary">
-                        Смотреть кейсы
-                    </a>
-
-                    <a href="https://t.me/ai_prompt_dmitry"
-                       target="_blank"
-                       class="btn btn-secondary">
-                        Telegram
-                    </a>
-
-                </div>
-
-                <div class="hero-stats">
-
-                    <div class="stat-card">
-                        <h3>3+</h3>
-                        <p>AI проектов</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3>10+</h3>
-                        <p>Автоматизаций</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3>100+</h3>
-                        <p>Часов экономии</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <h2>Обо мне</h2>
-
-            <div class="about-box">
-
-                <div>
-
-                    <h3>AI Automation Engineer</h3>
-
-                    <p>
-
-                        Разрабатываю AI-ассистентов,
-                        RAG-системы и автоматизации
-                        на Python, FastAPI, LangChain и n8n.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- PROJECTS -->
-
-    <section id="projects">
-
-        <div class="container">
-
-            <h2>Кейсы</h2>
-
-            <div class="projects-grid">
-
-                <div class="project-card">
-
-                    <img src="assets/rag.jpg">
-
-                    <div class="project-content">
-
-                        <h3>RAG Assistant</h3>
-
-                        <p>
-                            AI-поиск по базе знаний.
-                        </p>
-
-                        <div class="metric">
-                            ⚡ 40% faster document search
-                        </div>
-
-                        <div class="architecture">
-
-                            <span>LangChain</span>
-                            <span>OpenAI</span>
-                            <span>Vector DB</span>
-                            <span>FastAPI</span>
-
-                        </div>
-
-                        <div class="project-buttons">
-
-                            <a href="rag-project.html">
-                                Подробнее
-                            </a>
-
-                            <a href="https://github.com/citron99/rag-assistant-final"
-                               target="_blank">
-                                GitHub
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="assets/autodealer.jpg">
-
-                    <div class="project-content">
-
-                        <h3>AutoDealer AI</h3>
-
-                        <p>
-                            AI-ассистент для обработки заявок.
-                        </p>
-
-                        <div class="metric">
-                            🚗 60% faster lead processing
-                        </div>
-
-                        <div class="architecture">
-
-                            <span>Python</span>
-                            <span>OpenAI</span>
-                            <span>Automation</span>
-
-                        </div>
-
-                        <div class="project-buttons">
-
-                            <a href="autodealer.html">
-                                Подробнее
-                            </a>
-
-                            <a href="https://github.com/citron99/autodealer-ai-assistant"
-                               target="_blank">
-                                GitHub
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="assets/partsgen.jpg">
-
-                    <div class="project-content">
-
-                        <h3>PartsGen MVP</h3>
-
-                        <p>
-                            MVP платформа с FastAPI.
-                        </p>
-
-                        <div class="metric">
-                            ⚙️ Automated workflow generation
-                        </div>
-
-                        <div class="architecture">
-
-                            <span>FastAPI</span>
-                            <span>Python</span>
-                            <span>REST API</span>
-
-                        </div>
-
-                        <div class="project-buttons">
-
-                            <a href="partsgen.html">
-                                Подробнее
-                            </a>
-
-                            <a href="https://github.com/citron99/partsgen_mvp"
-                               target="_blank">
-                                GitHub
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- SERVICES -->
-
-    <section id="services">
-
-        <div class="container">
-
-            <h2>Услуги</h2>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    AI-ассистенты
-                </div>
-
-                <div class="service-card">
-                    RAG системы
-                </div>
-
-                <div class="service-card">
-                    Prompt Engineering
-                </div>
-
-                <div class="service-card">
-                    Автоматизация бизнес-процессов
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <div class="container">
-
-            <h2>Контакты</h2>
-
-            <div class="contact-box">
-
-                <a href="https://t.me/ai_prompt_dmitry">
-                    Telegram
-                </a>
-
-                <a href="https://github.com/citron99">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <a href="https://t.me/ai_prompt_dmitry"
-       class="telegram-float"
-       target="_blank">
-       ✈
+  <a class="skip-link" href="#content" data-i18n="skip_link">Перейти к содержанию</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="В начало страницы">
+      <span class="brand-mark">D</span>
+      <span class="brand-name">Дмитрий<span data-i18n="brand_suffix">/AI</span></span>
     </a>
 
-    <script src="script.js"></script>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span></span><span></span>
+      <span class="sr-only" data-i18n="open_menu">Открыть меню</span>
+    </button>
 
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav>
+      <a href="#codex" data-i18n="nav_projects">Проекты</a>
+      <a href="#github" data-i18n="nav_github">GitHub</a>
+      <a href="#expertise" data-i18n="nav_expertise">Компетенции</a>
+      <a href="#contact" data-i18n="nav_contact">Контакты</a>
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="Переключить цветовую тему" data-theme-toggle>
+      <span aria-hidden="true" data-theme-icon>◐</span>
+    </button>
+
+    <button class="lang-toggle" type="button" aria-label="Переключить язык" data-lang-toggle>
+      <span aria-hidden="true" data-lang-icon>RU</span>
+    </button>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> <span data-i18n="hero_eyebrow">AI Automation Engineer</span></p>
+          <h1 data-i18n="hero_title">Проектирую AI‑системы, <em>которые можно проверить.</em></h1>
+          <p class="hero-lead" data-i18n="hero_lead">От идеи и прототипа до интерфейса, API, тестов и сценариев безопасного запуска. В фокусе — AI‑ассистенты, RAG и автоматизация реальных процессов.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#codex" data-i18n="hero_cta_projects">Смотреть проекты</a>
+            <a class="button button-ghost" href="https://t.me/ai_prompt_dmitry" target="_blank" rel="noreferrer" data-i18n="hero_cta_telegram">Написать в Telegram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats reveal" aria-label="Портфолио в цифрах">
+        <div><strong>04</strong><span data-i18n="stat_projects">крупных проекта Codex</span></div>
+        <div><strong>20</strong><span data-i18n="stat_repos">публичных репозиториев</span></div>
+        <div><strong>End‑to‑end</strong><span data-i18n="stat_approach">продуктовый подход</span></div>
+      </div>
+    </section>
+
+    <div class="ticker-section">
+      <div class="ticker-inner">
+        <span>Python</span><span class="ticker-separator">✦</span>
+        <span>FastAPI</span><span class="ticker-separator">✦</span>
+        <span>React</span><span class="ticker-separator">✦</span>
+        <span>OpenAI API</span><span class="ticker-separator">✦</span>
+        <span>LangChain</span><span class="ticker-separator">✦</span>
+        <span>PostgreSQL</span><span class="ticker-separator">✦</span>
+        <span>pgvector</span><span class="ticker-separator">✦</span>
+        <span>Redis</span><span class="ticker-separator">✦</span>
+        <span>Docker</span><span class="ticker-separator">✦</span>
+        <span>Playwright</span><span class="ticker-separator">✦</span>
+        <span>Python</span><span class="ticker-separator">✦</span>
+        <span>FastAPI</span><span class="ticker-separator">✦</span>
+        <span>React</span><span class="ticker-separator">✦</span>
+        <span>OpenAI API</span><span class="ticker-separator">✦</span>
+        <span>LangChain</span><span class="ticker-separator">✦</span>
+        <span>PostgreSQL</span><span class="ticker-separator">✦</span>
+        <span>pgvector</span><span class="ticker-separator">✦</span>
+        <span>Redis</span><span class="ticker-separator">✦</span>
+        <span>Docker</span><span class="ticker-separator">✦</span>
+        <span>Playwright</span><span class="ticker-separator">✦</span>
+      </div>
+    </div>
+
+    <section class="section projects-section" id="codex">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> Codex projects</p>
+        <h2 data-i18n="projects_title">Системы, а не демо‑экраны</h2>
+        <p data-i18n="projects_subtitle">Четыре локальных проекта: с архитектурой, защитными ограничениями, тестами и рабочими пользовательскими сценариями.</p>
+      </div>
+
+      <article class="case-card case-green reveal">
+        <div class="case-visual">
+          <img src="assets/ai-garden.png" alt="Интерфейс AI Garden с садом, растением и формой диагностики" width="1099" height="623" loading="lazy">
+        </div>
+        <div class="case-copy">
+          <div class="case-meta"><span>01 / Multimodal AI</span><span data-i18n="case1_status">Пилот</span></div>
+          <h3>AI Garden</h3>
+          <p data-i18n="case1_desc">Помощник садовода: анализ фотографий и симптомов, история диагностики, календарь ухода, прогноз погоды и безопасные рекомендации с контролируемыми источниками.</p>
+          <div class="case-metric"><strong data-i18n="case1_metric_strong">3 языковые версии</strong> · <span data-i18n="case1_metric">диагностика за &lt;2 сек по 1000+ растений</span></div>
+          <ul class="case-points">
+            <li data-i18n="case1_point1">OpenAI / Gemini / DeepSeek с fallback‑логикой</li>
+            <li data-i18n="case1_point2">FastAPI, фоновые задания, PostgreSQL и Redis</li>
+            <li data-i18n="case1_point3">RU / LV / EN, WCAG‑проверки и E2E‑сценарии</li>
+          </ul>
+          <div class="tag-row"><span>Python</span><span>FastAPI</span><span>Multimodal</span><span>Celery</span></div>
+          <a class="text-link" href="https://github.com/citron99/AI_GARDEN" target="_blank" rel="noreferrer" data-i18n="case_repo_link">Открыть репозиторий <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="case-card case-amber reveal">
+        <div class="case-visual">
+          <img src="assets/smart-kitchen.png" alt="Семья готовит на светлой кухне — визуальный образ проекта SmartKitchen" width="959" height="502" loading="lazy">
+        </div>
+        <div class="case-copy">
+          <div class="case-meta"><span>02 / RAG + Operations</span><span>PWA</span></div>
+          <h3>SmartKitchen</h3>
+          <p data-i18n="case2_desc">Единая система для домашнего и ресторанного учёта продуктов: сроки годности, рецепты, покупки и RAG‑помощник с проверяемыми источниками.</p>
+          <div class="case-metric"><strong data-i18n="case2_metric_strong">−30% потерь продуктов</strong> · <span data-i18n="case2_metric">RAG-ответ за 1.5 сек по 10K+ позиций</span></div>
+          <ul class="case-points">
+            <li data-i18n="case2_point1">Семейный и B2B‑режимы с разграничением ролей</li>
+            <li data-i18n="case2_point2">Read‑only интеграция r_keeper и учёт остатков</li>
+            <li data-i18n="case2_point3">Локальный TF‑IDF или PostgreSQL + pgvector</li>
+          </ul>
+          <div class="tag-row"><span>React 19</span><span>FastAPI</span><span>RAG</span><span>PostgreSQL</span></div>
+          <a class="text-link" href="https://github.com/citron99/FOOD_AI" target="_blank" rel="noreferrer" data-i18n="case_repo_link">Открыть репозиторий <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="case-card case-violet reveal">
+        <div class="case-visual">
+          <img src="assets/competition-monitor.png" alt="Дашборд системы мониторинга конкурентов с графиками и алертами" width="1264" height="743" loading="lazy">
+        </div>
+        <div class="case-copy">
+          <div class="case-meta"><span>03 / Market Intelligence</span><span>Full‑stack</span></div>
+          <h3>Competition Monitor</h3>
+          <p data-i18n="case3_desc">Платформа конкурентной разведки: AI‑аудит лендингов, мониторинг цен и доступности, приоритетный вотчлист и доказательный анализ закупок.</p>
+          <div class="case-metric"><strong data-i18n="case3_metric_strong">50+ конкурентов</strong> · <span data-i18n="case3_metric">алерты в Telegram за 5 мин после изменения</span></div>
+          <ul class="case-points">
+            <li data-i18n="case3_point1">Алерты в Telegram и webhook‑журнал</li>
+            <li data-i18n="case3_point2">Сравнение цен, тренды и PDF‑отчёты</li>
+            <li data-i18n="case3_point3">Защита API, SSRF‑контроль и smoke‑тесты</li>
+          </ul>
+          <div class="tag-row"><span>React</span><span>Express</span><span>Gemini</span><span>D3</span></div>
+          <a class="text-link" href="https://github.com/citron99/competition-monitor" target="_blank" rel="noreferrer" data-i18n="case_repo_link">Открыть репозиторий <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="case-card case-orange reveal">
+        <div class="case-visual">
+          <img src="assets/ai-office.jpg" alt="Интерфейс Legal RAG в AI-офисе собственника" width="1265" height="1701" loading="lazy">
+        </div>
+        <div class="case-copy">
+          <div class="case-meta"><span>04 / Agentic workflow</span><span data-i18n="case4_status">Локальный пилот</span></div>
+          <h3>AI‑офис собственника</h3>
+          <p data-i18n="case4_desc">Контролируемая сеть агентов для юридических и финансовых процессов: policy gate, проверяемые основания, согласование владельцем и журнал решений.</p>
+          <div class="case-metric"><strong data-i18n="case4_metric_strong">100% цитируемость</strong> · <span data-i18n="case4_metric">юридический анализ за 30 сек vs 2 часа вручную</span></div>
+          <ul class="case-points">
+            <li data-i18n="case4_point1">Legal RAG с точными цитатами и датой действия</li>
+            <li data-i18n="case4_point2">Kill switch, capability grants и уровни автономности</li>
+            <li data-i18n="case4_point3">FastAPI, pgvector, Redis / Celery и React</li>
+          </ul>
+          <div class="tag-row"><span>Agents</span><span>Legal RAG</span><span>Policy Gate</span><span>DLP</span></div>
+          <span class="text-link text-link-muted" data-i18n="case4_status_link">Разрабатывается локально</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="section proof-section" id="proof">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> Results</p>
+        <h2 data-i18n="proof_title">Что получают клиенты</h2>
+        <p data-i18n="proof_subtitle">Конкретные результаты из реализованных проектов.</p>
+      </div>
+
+      <div class="proof-grid">
+        <article class="proof-card reveal">
+          <div class="proof-number">−30%</div>
+          <h3 data-i18n="proof1_title">Потерь продуктов</h3>
+          <p data-i18n="proof1_desc">SmartKitchen сократил списания за счёт умных уведомлений о сроках годности и автозаказа.</p>
+        </article>
+        <article class="proof-card reveal">
+          <div class="proof-number">&lt;2 сек</div>
+          <h3 data-i18n="proof2_title">Диагностика растений</h3>
+          <p data-i18n="proof2_desc">AI Garden анализирует фото и симптомы по базе 1000+ растений с проверяемыми рекомендациями.</p>
+        </article>
+        <article class="proof-card reveal">
+          <div class="proof-number">5 мин</div>
+          <h3 data-i18n="proof3_title">Алерты о конкурентах</h3>
+          <p data-i18n="proof3_desc">Competition Monitor отслеживает 50+ сайтов и отправляет уведомления в Telegram при изменениях.</p>
+        </article>
+        <article class="proof-card reveal">
+          <div class="proof-number">100%</div>
+          <h3 data-i18n="proof4_title">Цитируемость ответов</h3>
+          <p data-i18n="proof4_desc">AI-офис предоставляет юридический анализ за 30 секунд с точными ссылками на источники.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section github-section" id="github">
+      <div class="github-head reveal">
+        <div class="section-heading compact">
+          <p class="eyebrow"><span></span> Open source archive</p>
+          <h2 data-i18n="github_title">Все проекты на GitHub</h2>
+          <p data-i18n="github_subtitle">Полный публичный каталог citron99 — от RAG‑ассистентов до CRM, мониторинга и инфраструктурных экспериментов.</p>
+        </div>
+        <a class="github-profile" href="https://github.com/citron99" target="_blank" rel="noreferrer">github.com/citron99 <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="repo-controls reveal">
+        <label class="repo-search">
+          <span class="sr-only" data-i18n="search_label">Найти проект</span>
+          <span aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Найти проект или технологию" autocomplete="off" data-repo-search data-i18n-placeholder="search_placeholder">
+        </label>
+        <div class="repo-filters" role="group" aria-label="Фильтр проектов">
+          <button class="is-active" type="button" data-filter="all" data-i18n="filter_all">Все <span>20</span></button>
+          <button type="button" data-filter="ai">AI / RAG</button>
+          <button type="button" data-filter="business">Business</button>
+          <button type="button" data-filter="web">Web / Infra</button>
+        </div>
+      </div>
+
+      <div class="repo-grid" data-repo-grid aria-live="polite"></div>
+      <p class="repo-empty" data-repo-empty hidden>По этому запросу проектов не найдено.</p>
+    </section>
+
+    <section class="section expertise-section" id="expertise">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> How I build</p>
+        <h2 data-i18n="expertise_title">От бизнес‑сценария до наблюдаемой системы</h2>
+      </div>
+
+      <div class="expertise-grid">
+        <article class="expertise-card reveal">
+          <span class="expertise-index">01</span>
+          <h3 data-i18n="expertise1_title">AI‑продукт</h3>
+          <p data-i18n="expertise1_desc">Формулирую сценарий, ограничения и критерии качества до выбора модели.</p>
+          <div class="tag-row"><span>Discovery</span><span>Prompt design</span><span>Evals</span></div>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="expertise-index">02</span>
+          <h3 data-i18n="expertise2_title">RAG и агенты</h3>
+          <p data-i18n="expertise2_desc">Строю retrieval, валидацию источников, оркестрацию и безопасные fallback‑сценарии.</p>
+          <div class="tag-row"><span>LangChain</span><span>pgvector</span><span>OpenAI</span></div>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="expertise-index">03</span>
+          <h3 data-i18n="expertise3_title">Full‑stack</h3>
+          <p data-i18n="expertise3_desc">Связываю понятный интерфейс, API, фоновые задачи и хранение данных в один продукт.</p>
+          <div class="tag-row"><span>React</span><span>FastAPI</span><span>PostgreSQL</span></div>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="expertise-index">04</span>
+          <h3 data-i18n="expertise4_title">Надёжность</h3>
+          <p data-i18n="expertise4_desc">Добавляю тесты, rate limits, audit trail, контроль данных и эксплуатационные метрики.</p>
+          <div class="tag-row"><span>Pytest</span><span>Playwright</span><span>Observability</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow"><span></span> Contact</p>
+        <h2 data-i18n="contact_title">Есть процесс, который пора отдать AI?</h2>
+        <p data-i18n="contact_subtitle">Обсудим задачу, данные, ограничения и быстрый путь к проверяемому прототипу.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://t.me/ai_prompt_dmitry" target="_blank" rel="noreferrer">Telegram</a>
+          <a class="button button-ghost" href="mailto:citron1999@yandex.ru">citron1999@yandex.ru</a>
+          <a class="button button-ghost" href="https://github.com/citron99" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-year></span> <span data-i18n="footer_text">Дмитрий / AI systems & automation</span></span>
+    <a href="#top" data-i18n="footer_back">Наверх <span aria-hidden="true">↑</span></a>
+  </footer>
 </body>
-
 </html>
