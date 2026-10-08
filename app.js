@@ -352,7 +352,9 @@ function setTheme(theme) {
 const savedTheme = getSavedTheme();
 if (savedTheme === "light" || savedTheme === "dark") {
   setTheme(savedTheme);
-} else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  setTheme("dark");
+} else {
   setTheme("light");
 }
 
