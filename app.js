@@ -402,6 +402,7 @@ function applyTranslations(lang) {
 
 function setLang(lang) {
   applyTranslations(lang);
+  window.dispatchEvent(new CustomEvent("portfolio-language-change", { detail: lang }));
   try {
     localStorage.setItem("portfolio-lang", lang);
   } catch {
